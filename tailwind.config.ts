@@ -11,6 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        nSuave: "#121212",
+        vMusgo: "#1B4D3E",
+        bSuave: "#F8F9FA",
+        vSalvia: "#A3B18A",
+        vPino: "#12372A",
+        bHueso: "#F5F5DC",
+        nCarbon: "#33322E"
       },
     },
   },
