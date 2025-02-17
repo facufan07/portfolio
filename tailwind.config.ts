@@ -11,8 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        nSuave: "#121212",
-        vMusgo: "#1B4D3E",
+        nSuave: "#1E1E1E",
+        vMusgo: "#184E36",
         bSuave: "#F8F9FA",
         vSalvia: "#A3B18A",
         vPino: "#12372A",

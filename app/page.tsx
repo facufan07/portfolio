@@ -9,7 +9,7 @@ export default function Main() {
   const [themeFont, setThemeFont] = useState<string>('');
   const [themeSideBar, setThemeSideBar] = useState<string>('bg-vMusgo');
   const [themeFontSideBar, setThemeFontSideBar] = useState<string>('text-bHueso');
-  const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino');
+  const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino border-b border-vPino');
 
   const [icon, setIcon] = useState<string>('sunn.svg');
   const [iconBackground, setIconBackground] = useState<string>('bg-slate-100 hover:border-white');
@@ -20,7 +20,7 @@ export default function Main() {
       setIconBackground('bg-black hover:border-black');
       setThemeBackground('bg-bSuave');
       setThemeSideBar('bg-vSalvia');
-      setThemeFocus('hover:bg-green-100');
+      setThemeFocus('hover:bg-green-100 border-b border-green-100');
       setThemeFontSideBar('text-nCarbon');
     }
     else{
@@ -28,7 +28,7 @@ export default function Main() {
       setIconBackground('bg-slate-100 hover:border-white');
       setThemeBackground('bg-nSuave');
       setThemeSideBar('bg-vMusgo');
-      setThemeFocus('hover:bg-vPino');
+      setThemeFocus('hover:bg-vPino border-b border-vPino');
       setThemeFontSideBar('text-bHueso');
     }
     
