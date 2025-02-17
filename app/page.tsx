@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Main() {
 
   const [themeBackground, setThemeBackground] = useState<string>('bg-nSuave');
-  const [themeFont, setThemeFont] = useState<string>('');
+  const [themeFont, setThemeFont] = useState<string>('text-bHueso');
   const [themeSideBar, setThemeSideBar] = useState<string>('bg-vMusgo');
   const [themeFontSideBar, setThemeFontSideBar] = useState<string>('text-bHueso');
   const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino border-b border-vPino');
@@ -22,6 +22,7 @@ export default function Main() {
       setThemeSideBar('bg-vSalvia');
       setThemeFocus('hover:bg-green-100 border-b border-green-100');
       setThemeFontSideBar('text-nCarbon');
+      setThemeFont('text-nCarbon');
     }
     else{
       setIcon('sunn.svg');
@@ -30,6 +31,7 @@ export default function Main() {
       setThemeSideBar('bg-vMusgo');
       setThemeFocus('hover:bg-vPino border-b border-vPino');
       setThemeFontSideBar('text-bHueso');
+      setThemeFont('text-bHueso');
     }
     
   }
