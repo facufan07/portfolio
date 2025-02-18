@@ -1,6 +1,7 @@
 "use client"
 import MainIfo from "@/components/MainIfo/page";
 import SideBar from "@/components/SideBar/page";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Main() {
@@ -82,7 +83,7 @@ export default function Main() {
         <button
         onClick={() => {fadeOut()}}
         >
-          <img src={`../${themeBurguerMenu}.svg`} className="w-16"/>
+          <Image src={`../${themeBurguerMenu}.svg`} width={65} height={40} alt="Burger"/>
         </button>
         <button 
         className={`my-4 ${iconBackground} z-40 w-[70px] h-[70px] 
@@ -90,7 +91,7 @@ export default function Main() {
                   transition-all duration-500 border-2 hover:scale-110`}
         onClick={changeTheme}
         >
-          <img src={`../${icon}`} className="w-15"/>
+          <Image src={`../${icon}`} width={40} height={40} alt="icon"/>
         </button>
       </div>
     </main>
