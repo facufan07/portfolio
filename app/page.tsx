@@ -16,6 +16,8 @@ export default function Main() {
   const [icon, setIcon] = useState<string>('sunn.svg');
   const [iconBackground, setIconBackground] = useState<string>('bg-slate-100 hover:border-white');
 
+  const [menu, setMenu] = useState<boolean>(false);
+
   const [section, setSection] = useState<string>('');
 
   const changeTheme = () => {
@@ -44,6 +46,20 @@ export default function Main() {
     }
   }
 
+  const [animation, setAnimation] = useState<string>('fadeIn');
+    const fadeOut = () => {
+        if(menu === false){
+          setMenu(true);
+          setAnimation('fadeIn');
+        }
+        else{
+          setAnimation('fadeOut');
+          setTimeout(() => {  
+            setMenu(false);
+          }, 280)
+        }
+    }
+
   return (
     <main className="w-full h-full sm:flex overflow-hidden">
       <SideBar 
@@ -53,6 +69,8 @@ export default function Main() {
         section={section}
         setSection={setSection}
         buttonSelectedColor={themeSelectedButton}
+        menu={menu}
+        animation={animation}
       />
       <MainIfo
         fontColor={themeFont}
@@ -61,11 +79,13 @@ export default function Main() {
       />
 
       <div className="absolute top-0 px-4 flex justify-between w-full">
-        <button>
+        <button
+        onClick={() => {fadeOut()}}
+        >
           <img src={`../${themeBurguerMenu}.svg`} className="w-16"/>
         </button>
         <button 
-        className={`my-4 ${iconBackground} z-50 w-[70px] h-[70px] 
+        className={`my-4 ${iconBackground} z-40 w-[70px] h-[70px] 
                   rounded-full flex justify-center items-center hover:bg-transparent
                   transition-all duration-500 border-2 hover:scale-110`}
         onClick={changeTheme}

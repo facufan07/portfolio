@@ -1,0 +1,25 @@
+.fadeIn{
+    animation: fade 0.5s ease-in-out;
+}
+
+.fadeOut{
+    animation: fadeout 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        margin-right: 500px;
+    }
+    to {
+        margin-right: 0px;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        margin-right: 0px;
+    }
+    to {
+        margin-right: 500px;
+    }
+}
