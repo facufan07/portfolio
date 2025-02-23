@@ -24,7 +24,7 @@ export default function SideBar({fontColor, backgroundColor,
                 {data.map((s, i) => (
                     <button 
                     key={i}
-                    className={`h-4/5 ${focus} transition-all duration-400 hover:bg-opacity-80 
+                    className={`h-4/5 ${focus} transition-all duration-400 
                             ${section === s.name ? buttonSelectedColor : ''} hover:scale-110
                             hover:shadow-md hover:shadow-black flex justify-center items-center`}
                     onClick={() => setSection(s.name)}

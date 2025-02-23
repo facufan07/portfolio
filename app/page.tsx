@@ -13,7 +13,7 @@ export default function Main() {
   const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino border-b border-vPino');
   const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-vPino');
   const [themeBurguerMenu, setThemeBurguerMenu] = useState<string>('burger-menu-bHueso');
-  const [navTheme, setNavTheme] = useState<string>('bg-nSuave');
+  const [navTheme, setNavTheme] = useState<string>('max-sm:bg-nSuave');
 
   const [icon, setIcon] = useState<string>('sunn.svg');
   const [iconBackground, setIconBackground] = useState<string>('bg-slate-100 hover:border-white');
