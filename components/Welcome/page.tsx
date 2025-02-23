@@ -6,6 +6,9 @@ import "./style.css"
 import Image from 'next/image' 
 
 export default function Welcome({fontColor}: WelcomeProps){
+
+    const border = fontColor === 'text-bHueso' ? 'border-r-2 border-bHueso' : 'border-r-2 border-nCarbon'
+
     return(
         <section className="flex justify-center items-center h-dvh overflow-x-hidden">
             <div className="flex max-sm:flex-col max-sm:items-center gap-5 animation px-9">
@@ -18,12 +21,13 @@ export default function Welcome({fontColor}: WelcomeProps){
                 />
 
                 <div className="sm:ml-10 flex flex-col justify-center px-6 py-4">
-                    <h1 className={`sm:text-6xl max-sm:text-4xl tracking-wider ${fontColor} font-semibold sm:w-[550px]
-                                    max-sm:text-center`}>
+                    <h1 className={`sm:text-6xl max-sm:text-4xl tracking-wider ${fontColor} font-semibold 
+                                    whitespace-nowrap max-sm:text-center`}>
                         Facundo Fandiño
                     </h1>
-                    <h2 className={`sm:text-4xl tracking-widest ${fontColor} mt-10 font-light sm:w-[500px] 
-                                    max-sm:text-center max-sm:text-2xl`}>
+                    <h2 className={`sm:text-4xl tracking-widest ${fontColor} mt-10  
+                                    max-sm:text-2xl whitespace-nowrap ${border}
+                                    w-[23ch] typing font-extralight max-sm:mx-auto`}>
                         Desarrollador FullStack
                     </h2>
                 </div>
