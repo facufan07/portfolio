@@ -18,8 +18,8 @@ export default function SideBar({fontColor, backgroundColor,
                                 buttonSelectedColor, menu, animation}: SideBarProps) {
     return(
         <>
-            <section className={`h-dvh w-1/5 ${backgroundColor} transition-all 
-                                duration-800 flex flex-col shadow-lg z-50 shadow-slate-950
+            <section className={`w-1/5 ${backgroundColor} transition-all 
+                                duration-800 flex flex-col shadow-lg z-[60] shadow-slate-950
                                 max-sm:hidden`}>
                 {data.map((s, i) => (
                     <button 
@@ -41,13 +41,14 @@ export default function SideBar({fontColor, backgroundColor,
             {menu && (
                 <section className={`h-dvh ${backgroundColor} transition-all 
                 duration-800 flex flex-col shadow-lg z-50 shadow-slate-950
-                sm:hidden absolute right-0 ${animation}`}>
+                sm:hidden fixed right-0 ${animation}`}>
                     {data.map((s, i) => (
                         <button 
                         key={i}
                         className={`h-4/5 ${focus} transition-all duration-400 hover:bg-opacity-80 
                                 ${section === s.name ? buttonSelectedColor : ''} hover:scale-110
-                                hover:shadow-md hover:shadow-black flex justify-center items-center`}
+                                hover:shadow-md hover:shadow-black flex justify-center items-center
+                                px-4`}
                         onClick={() => setSection(s.name)}
                         >
                             <span 

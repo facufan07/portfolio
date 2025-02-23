@@ -13,6 +13,7 @@ export default function Main() {
   const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino border-b border-vPino');
   const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-vPino');
   const [themeBurguerMenu, setThemeBurguerMenu] = useState<string>('burger-menu-bHueso');
+  const [navTheme, setNavTheme] = useState<string>('bg-nSuave');
 
   const [icon, setIcon] = useState<string>('sunn.svg');
   const [iconBackground, setIconBackground] = useState<string>('bg-slate-100 hover:border-white');
@@ -33,6 +34,7 @@ export default function Main() {
       setThemeFont('text-nCarbon');
       setThemeSelectedButton('bg-green-100');
       setThemeBurguerMenu('burger-menu-nCarbon');
+      setNavTheme('max-sm:bg-bSuave');
     }
     else{
       setIcon('sunn.svg');
@@ -44,6 +46,7 @@ export default function Main() {
       setThemeFont('text-bHueso');
       setThemeSelectedButton('bg-vPino');
       setThemeBurguerMenu('burger-menu-bHueso');
+      setNavTheme('max-sm:bg-nSuave');
     }
   }
 
@@ -62,7 +65,7 @@ export default function Main() {
     }
 
   return (
-    <main className="w-full h-full sm:flex overflow-hidden">
+    <main className={`w-dvw h-dvh flex overflow-hidden max-sm:flex-col ${themeBackground}`}>
       <SideBar 
         fontColor={themeFontSideBar}
         backgroundColor={themeSideBar}
@@ -73,13 +76,9 @@ export default function Main() {
         menu={menu}
         animation={animation}
       />
-      <MainIfo
-        fontColor={themeFont}
-        backgroundColor={themeBackground}
-        section={section}
-      />
-
-      <div className="absolute top-0 px-4 flex justify-between w-full">
+      
+      <div className={`sm:fixed top-0 px-4 flex justify-between items-center ${navTheme}
+                      transition-all duration-800 max-sm:h-1/6 sm:z-50 sm:w-full`}>
         <button
         onClick={() => {fadeOut()}}
         >
@@ -94,6 +93,14 @@ export default function Main() {
           <Image src={`../${icon}`} width={40} height={40} alt="icon"/>
         </button>
       </div>
+
+      <MainIfo
+        fontColor={themeFont}
+        backgroundColor={themeBackground}
+        section={section}
+      />
+
+      
     </main>
   );
 }

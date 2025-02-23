@@ -1,0 +1,12 @@
+.opa-ani{
+    animation: opa-ani 1s ease-in-out;
+}
+
+@keyframes opa-ani {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
