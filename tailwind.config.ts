@@ -17,6 +17,7 @@ export default {
         vSalvia: "#A3B18A",
         vPino: "#12372A",
         bHueso: "#F5F5DC",
+        aOscuro: "#2C3E50",
         nCarbon: "#33322E"
       },
     },
