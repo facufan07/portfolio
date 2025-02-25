@@ -96,7 +96,8 @@ export default function Main() {
 
       <MainIfo
         fontColor={themeFont}
-        backgroundColor={themeBackground}
+        backgroundColor={themeSideBar}
+        backgroundColor2={themeBackground}
         section={section}
       />
 

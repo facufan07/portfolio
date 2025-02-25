@@ -2,6 +2,7 @@ interface MainIfoProps {
     fontColor: string;
     backgroundColor: string;
     section: string;
+    backgroundColor2: string;
 }
 
 import Welcome from "../Welcome/page";
@@ -10,7 +11,7 @@ import Contact from "../Contact/page";
 import Tecnologies from "../Tecnologies/page";
 import Proyects from "../Proyects/page";
 
-export default function MainIfo({fontColor, backgroundColor, section}: MainIfoProps) {
+export default function MainIfo({fontColor, backgroundColor, section, backgroundColor2}: MainIfoProps) {
 
     return(
         <section className={`sm:w-4/5 transition-all duration-800
@@ -33,6 +34,8 @@ export default function MainIfo({fontColor, backgroundColor, section}: MainIfoPr
             {section === 'Proyectos' && (
                 <Proyects
                 fontColor={fontColor}
+                backgroundColor={backgroundColor}
+                backgroundColor2={backgroundColor2}
                 />
             )}
 

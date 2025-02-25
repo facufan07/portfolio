@@ -18,7 +18,11 @@ export default {
         vPino: "#12372A",
         bHueso: "#F5F5DC",
         aOscuro: "#2C3E50",
-        nCarbon: "#33322E"
+        nCarbon: "#33322E",
+        vFluor: "#39FF14",
+        mNeon: "#7D1FA0",
+        mOscuro: "#2E1B0F",
+        vMedio: "#157A6E",
       },
     },
   },
