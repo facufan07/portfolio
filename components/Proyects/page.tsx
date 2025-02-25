@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import data from "@/data/proyects.json";
 import Proyect from "../Proyect/page";
 import "./style.css"
+import NextArrow from "../NextArrow/page";
+import PrevArrow from "../PrevArrow/page";
 
 interface ProyectsProps {
     fontColor: string;
@@ -21,6 +23,8 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
         autoplaySpeed: 2000,
         pauseOnHover: true,
         arrows: true,
+        prevArrow: <PrevArrow fontColor={fontColor} />,
+        nextArrow: <NextArrow fontColor={fontColor} />,
     };
 
     return (
