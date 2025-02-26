@@ -13,7 +13,7 @@ export default function Main() {
   const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino border-b border-vPino');
   const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-vPino');
   const [themeBurguerMenu, setThemeBurguerMenu] = useState<string>('burger-menu-bHueso');
-  const [navTheme, setNavTheme] = useState<string>('max-sm:bg-nSuave');
+  const [navTheme, setNavTheme] = useState<string>('max-lg:bg-nSuave');
 
   const [icon, setIcon] = useState<string>('sunn.svg');
   const [iconBackground, setIconBackground] = useState<string>('bg-slate-100 hover:border-white');
@@ -34,7 +34,7 @@ export default function Main() {
       setThemeFont('text-nCarbon');
       setThemeSelectedButton('bg-green-100');
       setThemeBurguerMenu('burger-menu-nCarbon');
-      setNavTheme('max-sm:bg-bSuave');
+      setNavTheme('max-lg:bg-bSuave');
     }
     else{
       setIcon('sunn.svg');
@@ -46,7 +46,7 @@ export default function Main() {
       setThemeFont('text-bHueso');
       setThemeSelectedButton('bg-vPino');
       setThemeBurguerMenu('burger-menu-bHueso');
-      setNavTheme('max-sm:bg-nSuave');
+      setNavTheme('max-lg:bg-nSuave');
     }
   }
 
@@ -60,12 +60,13 @@ export default function Main() {
           setAnimation('fadeOut');
           setTimeout(() => {  
             setMenu(false);
-          }, 280)
+          }, 480)
         }
     }
 
   return (
-    <main className={`w-dvw h-dvh flex overflow-hidden max-sm:flex-col ${themeBackground}`}>
+    <main className={`w-dvw h-dvh flex overflow-x-hidden 
+                    overflow-y-hidden max-lg:flex-col ${themeBackground}`}>
       <SideBar 
         fontColor={themeFontSideBar}
         backgroundColor={themeSideBar}
@@ -77,7 +78,7 @@ export default function Main() {
         animation={animation}
       />
       
-      <div className={`sm:fixed top-0 px-4 flex justify-between items-center ${navTheme}
+      <div className={`lg:fixed top-0 px-4 flex justify-between items-center ${navTheme}
                       transition-all duration-800 max-sm:h-1/6 sm:z-50 sm:w-full`}>
         <button
         onClick={() => {fadeOut()}}

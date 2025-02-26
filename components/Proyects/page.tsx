@@ -6,6 +6,7 @@ import Proyect from "../Proyect/page";
 import "./style.css"
 import NextArrow from "../NextArrow/page";
 import PrevArrow from "../PrevArrow/page";
+import { useState } from "react";
 
 interface ProyectsProps {
     fontColor: string;
@@ -27,6 +28,8 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
         nextArrow: <NextArrow fontColor={fontColor} />,
     };
 
+    const [isSelected, setIsSelected] = useState<boolean>(false);
+
     return (
         <div className="w-full h-full flex justify-center items-center">
             <div className="sm:w-[50%] max-sm:w-[100%] animation">
@@ -43,12 +46,13 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
                         challenge={p.challenge}
                         backgroundColor={backgroundColor}
                         backgroundColor2={backgroundColor2}
+                        isSelected={isSelected}
+                        setIsSelected={setIsSelected}
                         key={i}
                         />
                     ))}
                 </Slider>
             </div>
         </div>
-        
     )
 }

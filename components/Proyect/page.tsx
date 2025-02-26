@@ -9,6 +9,8 @@ interface ProyectsProps {
     challenge: string;
     backgroundColor: string;
     backgroundColor2: string;
+    isSelected: boolean;
+    setIsSelected: (isSelected: boolean) => void;
 }
 
 import Image from "next/image";
@@ -16,7 +18,7 @@ import Tecnology from "../Tecnology/page";
 
 export default function Proyect({fontColor, name, description, img, url, 
                                 urlRepo, tecnologies, challenge, backgroundColor,
-                                backgroundColor2}: ProyectsProps) {
+                                backgroundColor2, isSelected, setIsSelected}: ProyectsProps) {
     
     const tecnologiesCuted = tecnologies.slice(0, 5);
 

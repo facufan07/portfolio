@@ -20,7 +20,7 @@ export default function SideBar({fontColor, backgroundColor,
         <>
             <section className={`w-1/5 ${backgroundColor} transition-all 
                                 duration-800 flex flex-col shadow-lg z-[60] shadow-slate-950
-                                max-sm:hidden`}>
+                                max-lg:hidden`}>
                 {data.map((s, i) => (
                     <button 
                     key={i}
@@ -40,8 +40,8 @@ export default function SideBar({fontColor, backgroundColor,
 
             {menu && (
                 <section className={`h-dvh ${backgroundColor} transition-all 
-                duration-800 flex flex-col shadow-lg z-50 shadow-slate-950
-                sm:hidden fixed right-0 ${animation}`}>
+                duration-800 flex flex-col shadow-lg z-[60] shadow-slate-950
+                lg:hidden fixed right-0 ${animation}`}>
                     {data.map((s, i) => (
                         <button 
                         key={i}

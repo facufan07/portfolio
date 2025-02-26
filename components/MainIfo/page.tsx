@@ -14,10 +14,10 @@ import Proyects from "../Proyects/page";
 export default function MainIfo({fontColor, backgroundColor, section, backgroundColor2}: MainIfoProps) {
 
     return(
-        <section className={`sm:w-4/5 transition-all duration-800
+        <section className={`lg:w-4/5 transition-all duration-800
                             flex flex-col items-center sm:justify-center
-                            max-sm:h-5/6 max-sm:overflow-y-auto max-sm:overflow-x-hidden
-                            max-sm:px-9 max-sm:py-4`}>
+                            max-sm:h-5/6 max-lg:overflow-y-auto 
+                            max-lg:py-4 max-lg:mx-auto max-lg:px-9`}>
 
             {section === '' && (
                 <Welcome 
