@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Java"
+    },
+    {
+        "name": "Spring Boot"
+    },
+    {
+        "name": "Spring Security"
+    },
+    {
+        "name": "JPA/Hibernate"
+    },
+    {
+        "name": "React"
+    },
+    {
+        "name": "Next.js"
+    },
+    {
+        "name": "JavaScript"
+    },
+    {
+        "name": "TypeScript"
+    },
+    {
+        "name": "Tailwind"
+    },
+    {
+        "name": "CSS"
+    },
+    {
+        "name": "MySQL"
+    }
+]

@@ -42,6 +42,8 @@ export default function MainIfo({fontColor, backgroundColor, section, background
             {section === 'Tecnologías' && (
                 <Tecnologies
                 fontColor={fontColor}
+                backgroundColor={backgroundColor}
+                backgroundColor2={backgroundColor2}
                 />
             )}
 

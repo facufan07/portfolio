@@ -1,0 +1,35 @@
+.animation{
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.typing{
+    animation: typing 1s steps(12) forwards, blink .5s step-end infinite alternate;
+    
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        margin-left: 200px;
+        opacity: 0;
+    }
+    50% {
+    }
+    to {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    
+}

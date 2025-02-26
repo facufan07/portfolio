@@ -12,6 +12,7 @@ interface ProyectsProps {
 }
 
 import Image from "next/image";
+import Tecnology from "../Tecnology/page";
 
 export default function Proyect({fontColor, name, description, img, url, 
                                 urlRepo, tecnologies, challenge, backgroundColor,
@@ -34,7 +35,7 @@ export default function Proyect({fontColor, name, description, img, url,
             </div>
             
             <h1 
-            className={`${fontColor} text-center text-5xl max-sm:text-3xl font-bold tracking-widest`}
+            className={`${fontColor} text-center text-5xl max-sm:text-2xl font-bold tracking-widest`}
             >
                 {name}
             </h1>
@@ -42,20 +43,13 @@ export default function Proyect({fontColor, name, description, img, url,
             className={`flex flex-wrap gap-4 mt-8`}
             >
                 {tecnologiesCuted.map((t, i)=>(
-                    <div
-                    className={`flex items-center gap-2 ${backgroundColor2} rounded-lg px-3 py-1 shadow-md shadow-black`}
+                    <Tecnology
+                    fontColor={fontColor}
+                    t={t}
+                    backgroundColor={backgroundColor}
+                    backgroundColor2={backgroundColor2}
                     key={i}
-                    >
-                        <div 
-                        className={`w-2 h-2 ${backgroundColor} rounded-full`}
-                        >
-                        </div>
-                        <span 
-                        className={`${fontColor} tracking-widest font-semibold`}
-                        >
-                            {t}
-                        </span>
-                    </div>
+                    />
                 ))}
                 {tecnologies > tecnologiesCuted && (
                     <div
