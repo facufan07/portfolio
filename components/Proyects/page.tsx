@@ -15,7 +15,7 @@ interface ProyectsProps {
 }
 
 export default function Proyects({fontColor, backgroundColor, backgroundColor2}: ProyectsProps) {
-    var settings = {
+    let settings = {
         dots: true,
         infinite: true,
         slidesToShow: 1,
@@ -28,7 +28,6 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
         nextArrow: <NextArrow fontColor={fontColor} />,
     };
 
-    const [isSelected, setIsSelected] = useState<boolean>(false);
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
     return (
