@@ -21,7 +21,7 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         pauseOnHover: true,
         arrows: true,
         prevArrow: <PrevArrow fontColor={fontColor} />,
@@ -29,11 +29,13 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
     };
 
     const [isSelected, setIsSelected] = useState<boolean>(false);
+    const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
     return (
-        <div className="w-full h-full flex justify-center items-center">
-            <div className="sm:w-[50%] max-sm:w-[100%] animation">
-                <Slider {...settings}>
+        <div className="w-5/6 h-5/6 flex justify-center items-center">
+            <div className="lg:w-[100%] max-sm:w-[100%] max-lg:w-[700px] max-lg:overflow-x-hidden 
+                            animation max-lg:overflow-y-hidden my-auto">
+                <Slider {...settings} className="text-center">
                     {data.map((p, i) => (
                         <Proyect
                         fontColor={fontColor}
@@ -46,8 +48,9 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
                         challenge={p.challenge}
                         backgroundColor={backgroundColor}
                         backgroundColor2={backgroundColor2}
-                        isSelected={isSelected}
-                        setIsSelected={setIsSelected}
+                        isSelected={selectedProject === i}
+                        setIsSelected={() => setSelectedProject(i)}
+                        setSelectedProject={setSelectedProject}
                         key={i}
                         />
                     ))}

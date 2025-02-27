@@ -15,9 +15,10 @@ export default function MainIfo({fontColor, backgroundColor, section, background
 
     return(
         <section className={`lg:w-4/5 transition-all duration-800
-                            flex flex-col items-center sm:justify-center
+                            flex flex-col items-center lg:justify-center
                             max-sm:h-5/6 max-lg:overflow-y-auto 
-                            max-lg:py-4 max-lg:mx-auto max-lg:px-9`}>
+                            max-lg:py-4 max-lg:mx-auto 
+                            max-sm:w-full max-sm:overflow-x-hidden`}>
 
             {section === '' && (
                 <Welcome 

@@ -10,7 +10,7 @@ export default function Welcome({fontColor}: WelcomeProps){
     const border = fontColor === 'text-bHueso' ? 'border-r-2 border-bHueso' : 'border-r-2 border-nCarbon'
 
     return(
-        <section className="flex justify-center items-center h-dvh sm:w-4/5">
+        <section className="flex justify-center items-center h-dvh lg:w-4/5">
             <div className="flex max-lg:flex-col max-lg:items-center gap-5 animation px-9 
                             ">
                 <Image src="/cvimgF.jpg" 
