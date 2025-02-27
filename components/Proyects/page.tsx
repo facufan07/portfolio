@@ -15,7 +15,7 @@ interface ProyectsProps {
 }
 
 export default function Proyects({fontColor, backgroundColor, backgroundColor2}: ProyectsProps) {
-    let settings = {
+    const settings = {
         dots: true,
         infinite: true,
         slidesToShow: 1,
