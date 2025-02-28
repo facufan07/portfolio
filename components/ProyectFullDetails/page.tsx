@@ -62,6 +62,12 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                         <div
                         className="h-auto w-2/4 px-7 max-lg:w-full"
                         >
+                            <h1
+                            className={`text-5xl ${fontColor} font-bold tracking-widest lg:hidden mb-9`}
+                            >
+                                {name}
+                            </h1>
+
                             <p
                             className={`${fontColor} text-xl font-semibold tracking-widest`}
                             >

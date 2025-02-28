@@ -16,7 +16,7 @@ export default function Tecnology({fontColor, t, backgroundColor, backgroundColo
                     >
                     </div>
                     <span 
-                    className={`${fontColor} tracking-widest font-semibold`}
+                    className={`${fontColor} tracking-widest font-semibold max-sm:text-sm`}
                     >
                         {t}
                     </span>

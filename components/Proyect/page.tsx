@@ -24,12 +24,13 @@ export default function Proyect({fontColor, name, description, img, url,
     
     const tecnologiesCuted = tecnologies.slice(0, 5);
 
+    const borderColor = fontColor === "text-bHueso" ? "border-bHueso hover:bg-bHueso hover:text-nCarbon" : "border-nCarbon hover:bg-nCarbon hover:text-bHueso";
+
     return (
         <>
-            <button 
-            className={`rounded-lg mx-14 px-6 py-6 hover:scale-90 scale-95 transition-all duration-300 shadow-md 
-                        shadow-black ${backgroundColor} max-sm:w-4/6 max-sm:h-[550px]`}
-            onClick={() => setIsSelected()}
+            <div
+            className={`rounded-lg mx-14 px-6 py-6 scale-95 transition-all duration-300 shadow-md 
+                        shadow-black ${backgroundColor} max-sm:w-6/6 max-sm:h-auto`}
             >
                 <div
                 className="w-full"
@@ -77,7 +78,17 @@ export default function Proyect({fontColor, name, description, img, url,
                         </div>
                     )}
                 </div>
-            </button>
+                <button 
+                className={`${borderColor} ${fontColor} border-2 rounded-lg px-4 py-2 mt-8  transition-all duration-300`}
+                onClick={() => setIsSelected()}
+                >
+                    <span
+                    className="font-semibold text-2xl tracking-widest max-sm:text-base"
+                    >
+                        Visualizar
+                    </span>
+                </button>
+            </div>
 
             {isSelected && (
                 <ProyectFullDetails

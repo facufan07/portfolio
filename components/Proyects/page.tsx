@@ -34,7 +34,7 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
         <div className="w-5/6 h-5/6 flex justify-center items-center">
             <div className="lg:w-[100%] max-sm:w-[100%] max-lg:w-[700px] max-lg:overflow-x-hidden 
                             animation max-lg:overflow-y-hidden my-auto">
-                <Slider {...settings} className="text-center">
+                <Slider {...settings} className="text-center mx-auto">
                     {data.map((p, i) => (
                         <Proyect
                         fontColor={fontColor}
