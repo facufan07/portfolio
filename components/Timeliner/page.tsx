@@ -20,7 +20,7 @@ export default function Timeliner({fontColor, backgroundColor, backgroundColor2}
     const bgDot = fontColor === 'text-bHueso' ? '#F5F5DC' : '#33322E';
 
     return (
-        <Timeline position="alternate">
+        <Timeline position="alternate-reverse">
             {data.map((d, i) => (
                 <TimelineItem key={i}>
                     <TimelineSeparator>

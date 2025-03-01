@@ -22,6 +22,8 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                                             setIsSelected}:ProyectFullDetailsProps) {
     const svg = fontColor === 'text-bHueso' ? '/circle-xmark-svgrepo-com.svg' : '/circle-xmark-black.svg'
     const scrollbarStyle = fontColor === 'text-bHueso' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
+    const scrollbarTrack = fontColor === 'text-bHueso' ? 'scrollbar-track-nSuave' : 'scrollbar-track-bSuave'
+
     return createPortal(
         <section 
         className={`!fixed top-0 w-dvw h-dvh bg-black/20 z-[100]`}
@@ -32,7 +34,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                 <div
                 className={`${backgroundColor} w-4/5 h-5/6 overflow-y-auto lg:rounded-lg 
                             scrollbar ${scrollbarStyle} shadow-lg shadow-black px-6 pb-7
-                            max-lg:w-full max-lg:h-full`}
+                            max-lg:w-full max-lg:h-full ${scrollbarTrack}`}
                 >
                     <nav className="flex justify-between items-center py-12 px-7">
                         <h1

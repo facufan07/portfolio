@@ -8,7 +8,7 @@ interface TrajectoryProps {
 
 export default function Trajectory({fontColor, backgroundColor, backgroundColor2}: TrajectoryProps) {
     return (
-        <section className="w-full h-full py-6">
+        <section className="w-full h-full py-6 animation">
             <Timeliner 
             fontColor={fontColor}
             backgroundColor={backgroundColor}
