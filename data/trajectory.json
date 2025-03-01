@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Curso de Desarrollo Frontend",
+        "description": "Aprendí a desarrollar aplicaciones web.",
+        "state": "Completado",
+        "BeginYear": "Enero 2023",
+        "EndYear": "Nov 2023",
+        "Institution": "CourseIT",
+        "learned": ["HTML", "CSS", "JavaScript", "React"]
+    },
+    {
+        "name": "Tecnicatura en Programación",
+        "description": "Estoy obteniendo una formación sólida en programación.",
+        "state": "En curso",
+        "BeginYear": "Enero 2024",
+        "EndYear": "Cursando",
+        "Institution": "UTN",
+        "learned": ["Python", "Java", "MySQL", "Algoritmos", "Estructuras de datos", "Programación orientada a objetos", "Bases de datos"]
+    },
+    {
+        "name": "Curso de Desarrollo Backend con Spring Boot",
+        "description": "Aprendí a desarrollar servicios API REST con Spring Boot.",
+        "state": "Completado",
+        "BeginYear": "Oct 2024",
+        "EndYear": "Dic 2024",
+        "Institution": "Todo Code",
+        "learned": ["Spring Boot", "Spring Data JPA/Hibernate", "Lombok", "Maven", "Postman"]
+    },
+    {
+        "name": "Curso de Spring Security",
+        "description": "Aprendiendo cómo desarrollar API seguras con Spring Security.",
+        "state": "En curso",
+        "BeginYear": "Enero 2025",
+        "EndYear": "Cursando",
+        "Institution": "Udemy",
+        "learned": ["Spring Security", "JWT"]
+    }
+]

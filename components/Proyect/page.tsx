@@ -83,7 +83,7 @@ export default function Proyect({fontColor, name, description, img, url,
                 onClick={() => setIsSelected()}
                 >
                     <span
-                    className="font-semibold text-2xl tracking-widest max-sm:text-base"
+                    className="font-semibold text-2xl tracking-widest max-sm:text-sm"
                     >
                         Visualizar
                     </span>
