@@ -65,6 +65,8 @@ export default function MainIfo({fontColor, backgroundColor, section, background
             {section === 'Contacto' && (
                 <Contact
                 fontColor={fontColor}
+                backgroundColor={backgroundColor}
+                backgroundColor2={backgroundColor2}
                 />
             )}
             
