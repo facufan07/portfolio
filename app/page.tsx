@@ -52,16 +52,23 @@ export default function Main() {
 
   const [animation, setAnimation] = useState<string>('fadeIn');
     const fadeOut = () => {
-        if(menu === false){
-          setMenu(true);
-          setAnimation('fadeIn');
-        }
-        else{
-          setAnimation('fadeOut');
+      if(menu === false){
+        setMenu(true);
+        setAnimation('fadeIn');
+      }
+      else{
+        setAnimation('fadeOut');
+        setTimeout(() => {  
+          setMenu(false);
+        }, 480)
+      }
+    }
+
+    const fadeOut2 = () => {
+      setAnimation('fadeOut');
           setTimeout(() => {  
             setMenu(false);
           }, 480)
-        }
     }
 
   return (
@@ -100,9 +107,8 @@ export default function Main() {
         backgroundColor={themeSideBar}
         backgroundColor2={themeBackground}
         section={section}
+        fadeAnimation={fadeOut2}
       />
-
-      
     </main>
   );
 }

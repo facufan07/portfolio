@@ -3,6 +3,7 @@ interface MainIfoProps {
     backgroundColor: string;
     section: string;
     backgroundColor2: string;
+    fadeAnimation: () => void;
 }
 
 import Welcome from "../Welcome/page";
@@ -12,19 +13,23 @@ import Tecnologies from "../Tecnologies/page";
 import Proyects from "../Proyects/page";
 import Trajectory from "../Trajectory/page";
 
-export default function MainIfo({fontColor, backgroundColor, section, backgroundColor2}: MainIfoProps) {
+export default function MainIfo({fontColor, backgroundColor, section, backgroundColor2, 
+                                fadeAnimation}: MainIfoProps) {
 
     const scrollbarStyle = fontColor === 'text-bHueso' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
     const scrollbarTrack = fontColor === 'text-bHueso' ? 'scrollbar-track-nSuave' : 'scrollbar-track-bSuave'
 
     return(
-        <section className={`lg:w-4/5 transition-all duration-800
-                            flex flex-col items-center lg:justify-center
-                            max-sm:h-5/6 max-lg:overflow-y-auto 
-                            max-lg:py-4 max-lg:mx-auto 
-                            max-sm:w-full max-sm:overflow-x-hidden
-                            lg:overflow-y-auto lg:overflow-x-hidden scrollbar
-                            ${scrollbarStyle} ${scrollbarTrack}`}>
+        <section 
+        className={`lg:w-4/5 transition-all duration-800
+                    flex flex-col items-center lg:justify-center
+                    max-sm:h-5/6 max-lg:overflow-y-auto 
+                    max-lg:py-4 max-lg:mx-auto 
+                    max-sm:w-full max-sm:overflow-x-hidden
+                    lg:overflow-y-auto lg:overflow-x-hidden scrollbar
+                    ${scrollbarStyle} ${scrollbarTrack}`}
+        onClick={() => {fadeAnimation();}}
+        >
 
             {section === '' && (
                 <Welcome 
