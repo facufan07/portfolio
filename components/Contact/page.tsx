@@ -9,6 +9,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import "./style.css";
+import Alert from "../Alert/page";
 
 export default function Contact({fontColor, backgroundColor, backgroundColor2}: ContactProps) {
 
@@ -19,6 +20,8 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
     const [mail, setMail] = useState<string>("");
     const [asunto, setAsunto] = useState<string>("");
     const [mensaje, setMensaje] = useState<string>("");
+    const [alert, setAlert] = useState<boolean>(false);
+    const [alertMessage, setAlertMessage] = useState<string>("");
 
     const handleSubmit = () => {
         axios.post("https://mail-sender-production-4514.up.railway.app/mail", {
@@ -26,10 +29,12 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
             subject: asunto,
             message: mensaje
         }).then(() => {
-            alert("Mensaje enviado con éxito");
+            setAlert(true);
+            setAlertMessage("Mensaje enviado con éxito");
         })
         .catch(() => {
-            alert("Error al enviar el mensaje");
+            setAlert(true);
+            setAlertMessage("Error al enviar el mensaje");
         })
     }
 
@@ -142,6 +147,17 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
                     Enviar
                 </button>
             </form>
+
+            {alert && (
+                <Alert
+                fontColor={fontColor}
+                backgroundColor={backgroundColor}
+                backgroundColor2={backgroundColor2}
+                message={alertMessage}
+                setAlert={setAlert}
+                />
+            )}
+
         </section>
     )
 }
