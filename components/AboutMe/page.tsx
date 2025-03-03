@@ -22,7 +22,7 @@ export default function AboutMe({fontColor}: AboutMeProps) {
             <p className={`text-xl tracking-wider font-semibold sm:w-[600px] ${fontColor} leading-relaxed
                             max-sm:text-base`}>
             Estoy cursando la carrera Tecnicatura en programación y en sistemas en la UTN, 
-            y cada día sigo mejorando mis conocimientos junto a herramientas nuevas.
+            y cada día sigo mejorando mis conocimientos junto a nuevas herramientas.
             </p>
         </div>
     )
