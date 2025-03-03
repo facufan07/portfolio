@@ -19,7 +19,8 @@ export default function CardTrajectory({fontColor, backgroundColor, backgroundCo
     return(
         <>
             <div
-            className={`flex flex-col gap-5 rounded-lg items-start p-4 ${backgroundColor} shadow-md shadow-black`}
+            className={`flex flex-col gap-5 rounded-lg items-start p-4 ${backgroundColor} shadow-md
+                    shadow-black max-sm:w-[250px] max-sm:mb-12`}
             >
                 <h1
                 className={`${fontColor} text-xl tracking-widest text-left max-sm:text-lg`}

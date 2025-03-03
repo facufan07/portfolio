@@ -5,8 +5,8 @@ import {
     TimelineConnector, 
     TimelineContent, 
     TimelineDot } 
-
 from "@mui/lab";
+import { useMediaQuery, useTheme } from "@mui/material";
 import data from "@/data/trajectory.json";
 import CardTrajectory from "../CardTrajectory/page";
 
@@ -18,9 +18,11 @@ interface TimelinerProps {
 
 export default function Timeliner({fontColor, backgroundColor, backgroundColor2}: TimelinerProps) {
     const bgDot = fontColor === 'text-bHueso' ? '#F5F5DC' : '#33322E';
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (
-        <Timeline position="alternate-reverse">
+        <Timeline position={isMobile ? "right" : "alternate-reverse"}>
             {data.map((d, i) => (
                 <TimelineItem key={i}>
                     <TimelineSeparator>
