@@ -13,8 +13,6 @@
         margin-left: 200px;
         opacity: 0;
     }
-    50% {
-    }
     to {
         margin-left: 0px;
         opacity: 1;

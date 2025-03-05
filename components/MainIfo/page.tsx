@@ -3,7 +3,6 @@ interface MainIfoProps {
     backgroundColor: string;
     section: string;
     backgroundColor2: string;
-    fadeAnimation: () => void;
 }
 
 import Welcome from "../Welcome/page";
@@ -14,7 +13,7 @@ import Proyects from "../Proyects/page";
 import Trajectory from "../Trajectory/page";
 
 export default function MainIfo({fontColor, backgroundColor, section, backgroundColor2, 
-                                fadeAnimation}: MainIfoProps) {
+                                }: MainIfoProps) {
 
     const scrollbarStyle = fontColor === 'text-bHueso' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
     const scrollbarTrack = fontColor === 'text-bHueso' ? 'scrollbar-track-nSuave' : 'scrollbar-track-bSuave'
@@ -28,7 +27,6 @@ export default function MainIfo({fontColor, backgroundColor, section, background
                     max-sm:w-full max-sm:overflow-x-hidden
                     lg:overflow-y-auto lg:overflow-x-hidden scrollbar
                     ${scrollbarStyle} ${scrollbarTrack}`}
-        onClick={() => {fadeAnimation();}}
         >
 
             {section === '' && (

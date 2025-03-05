@@ -50,10 +50,13 @@ export default function Main() {
     }
   }
 
-  const [animation, setAnimation] = useState<string>('fadeIn');
+  const [animation, setAnimation] = useState<string>('fadeIn'); 
+  const [isActive, setIsActive] = useState<boolean>(false);
+
     const fadeOut = () => {
       if(menu === false){
         setMenu(true);
+        setIsActive(true);
         setAnimation('fadeIn');
       }
       else{
@@ -83,6 +86,9 @@ export default function Main() {
         buttonSelectedColor={themeSelectedButton}
         menu={menu}
         animation={animation}
+        fadeOut={fadeOut2}
+        isActive={isActive}
+        setIsActive={setIsActive}
       />
       
       <div className={`lg:fixed top-0 px-4 flex justify-between items-center ${navTheme}
@@ -107,7 +113,6 @@ export default function Main() {
         backgroundColor={themeSideBar}
         backgroundColor2={themeBackground}
         section={section}
-        fadeAnimation={fadeOut2}
       />
     </main>
   );

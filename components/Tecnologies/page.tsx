@@ -17,7 +17,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
         <>
             <div className="px-24 py-7 animation sm:w-full">
                 <h1 
-                className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6`}
+                className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center`}
                 >
                     Tecnologías que utilizó:
                 </h1>
@@ -36,7 +36,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
                 </div>
                 
                 <h1
-                className={`text-4xl tracking-widest ${fontColor} font-semibold`}
+                className={`text-4xl tracking-widest ${fontColor} font-semibold max-sm:text-center`}
                 >
                     Otras herramientas que utilizó:
                 </h1>

@@ -41,7 +41,11 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
     return(
         <section className="animation h-full flex flex-col lg:py-10">  
             <div className="w-full">
-                <h1 className={`${fontColor} text-4xl font-bold tracking-widest mb-8`}>Mis redes:</h1>
+                <h1 className={`${fontColor} text-4xl font-bold tracking-widest mb-8
+                                max-sm:text-center`}
+                >
+                    Mis redes:
+                </h1>
                 <div
                 className="flex gap-6 justify-start items-center mb-16"
                 >
@@ -92,17 +96,21 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
             action={handleSubmit} 
             className="flex flex-col gap-6 w-full"
             >
-                <h1 className={`text-4xl font-bold ${fontColor} tracking-widest`}>Contactame:</h1>
+                <h1 className={`text-4xl font-bold ${fontColor} tracking-widest 
+                                max-sm:text-center`}
+                >
+                    Contáctame:
+                </h1>
                 <div className="flex flex-col gap-6">
                     <div>
-                        <h2 className={`text-base font-semibold ${fontColor} px-1 py-1`}>Mail:</h2>
+                        <h2 className={`text-base font-semibold ${fontColor} px-1 py-1`}>Correo:</h2>
                         <input 
                         type="email"
                         onChange={(e) => setMail(e.target.value)} 
                         required
-                        placeholder="Escribe tu mail . . ."
+                        placeholder="Escribe tu correo . . ."
                         className={`w-[300px] max-sm:w-full px-2 rounded-lg ${backgroundColor}
-                                    ${fontColor} shadow-md shadow-black outline-none py-1
+                                    ${fontColor} shadow-md shadow-black outline-none py-2
                                     ${placeholderColor} tracking-widest`} 
                         />
                     </div>
@@ -116,7 +124,7 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
                         minLength={8}
                         placeholder="Escribe el asunto . . ."
                         className={`w-[500px] max-sm:w-full px-2 rounded-lg ${backgroundColor}
-                                    ${fontColor} shadow-md shadow-black outline-none py-1
+                                    ${fontColor} shadow-md shadow-black outline-none py-2
                                     ${placeholderColor} tracking-widest`}
                         />
                     </div>
@@ -132,7 +140,7 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
                     minLength={15}
                     className={`${backgroundColor} ${fontColor} w-[500px] max-sm:w-full px-2 rounded-lg
                                 shadow-md shadow-black outline-none py-1 text-base ${placeholderColor}
-                                resize-none h-[150px] tracking-widest`}
+                                resize-none h-[150px] tracking-widest py-2`}
                     >
                     </textarea>
                 </div>

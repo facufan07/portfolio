@@ -30,7 +30,7 @@ export default function Welcome({fontColor}: WelcomeProps){
                     <h2 className={`sm:text-4xl tracking-widest ${fontColor} mt-10  
                                     max-sm:text-2xl max-lg:text-4xl whitespace-nowrap ${border}
                                     w-[23ch] typing font-extralight max-lg:mx-auto`}>
-                        Desarrollador FullStack
+                        Desarrollador Frontend
                     </h2>
                 </div>
             </div>
