@@ -12,7 +12,7 @@
         "name": "Clientes y Empresas",
         "technologies": ["TypeScript", "Tailwind", "CSS", "React", "Next.js", "Java", "Spring Boot", "MySQL", "JPA/Hibernate"],
         "challenge": "El mayor desafío de este proyecto fue el armado de las relaciones en la base de datos y la lógica de algunos endpoints. Sin embargo, pude resolverlo informándome sobre los diagramas de entidad-relación (DER) y aplicándolos al proyecto.",
-        "desc": "Este proyecto es una simulación sobre clientes que realizan compras a una empresa. Se puede ver tanto desde la vista del cliente como desde la de la empresa. Me enfoqué principalmente en el backend y en el diseño de las relaciones de ventas en la base de datos, por lo que el frontend no es su punto fuerte.",
+        "desc": "Este proyecto es una simulación sobre clientes que realizan compras a una empresa. Se puede ver tanto desde la vista del cliente como desde la de la empresa. Me enfoqué principalmente en el backend y en el diseño de las relaciones de ventas en la base de datos.",
         "url": "https://clientes-y-empresa.vercel.app/",
         "urlRepo": "https://github.com/facufan07/clientes-y-empresa",
         "img": "/proyectImages/manejoVentas.png"

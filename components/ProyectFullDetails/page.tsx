@@ -33,10 +33,10 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
             >
                 <div
                 className={`${backgroundColor} w-4/5 h-5/6 overflow-y-auto lg:rounded-lg 
-                            scrollbar ${scrollbarStyle} shadow-lg shadow-black px-6 pb-7
-                            max-lg:w-full max-lg:h-full ${scrollbarTrack}`}
+                            scrollbar ${scrollbarStyle} shadow-lg shadow-black pb-7
+                            max-lg:w-full max-lg:h-full ${scrollbarTrack} px-7`}
                 >
-                    <nav className="flex justify-between items-center py-12 px-7">
+                    <nav className="flex justify-between items-center pt-12 pb-10">
                         <h1
                         className={`text-5xl ${fontColor} font-bold tracking-widest
                                     max-lg:hidden`}
@@ -61,34 +61,14 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                     <div 
                     className="h-auto w-full flex max-lg:flex-col"
                     >
-                        <div
-                        className="h-auto w-2/4 px-7 max-lg:w-full"
+                        <h1
+                        className={`text-5xl ${fontColor} font-bold tracking-widest lg:hidden mb-9 
+                                    max-sm:text-3xl px-7 text-center`}
                         >
-                            <h1
-                            className={`text-5xl ${fontColor} font-bold tracking-widest lg:hidden mb-9`}
-                            >
-                                {name}
-                            </h1>
-
-                            <p
-                            className={`${fontColor} text-xl font-semibold tracking-widest`}
-                            >
-                                {description}
-                            </p>
-
-                            <h2
-                            className={`${fontColor} text-2xl font-semibold tracking-widest mt-16 mb-7`}>
-                                Desafio:
-                            </h2>
-
-                            <p
-                            className={`${fontColor} text-xl font-semibold tracking-widest`}
-                            >
-                                {challenge}
-                            </p>
-                        </div>
+                            {name}
+                        </h1>
                         <div
-                        className="h-auto w-2/4 flex flex-col items-center max-lg:w-full max-lg:mt-16"
+                        className="h-auto w-2/4 flex flex-col items-center max-lg:w-full max-lg:mt-2 max-lg:mb-10"
                         >
                             <Image
                             src={img}
@@ -98,14 +78,14 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                             className="rounded-lg w-full h-2/4 mb-8 shadow-lg shadow-black object-cover"
                             />
 
-<div 
-                            className="mb-16 w-full flex justify-center gap-5 max-lg:flex-col items-center"
+                            <div 
+                            className="mb-16 w-full flex justify-center gap-5 items-center"
                             >
                                 <a 
                                 className={`${backgroundColor2} px-3 py-6 rounded-lg shadow-md shadow-black w-2/4
                                             text-center hover:scale-90 transition-all duration-300
                                             hover:shadow-none ${fontColor} tracking-widest hover:bg-transparent
-                                            text-2xl font-semibold`}
+                                            text-2xl font-semibold max-sm:text-xl`}
                                 href={url}> 
                                     Deploy
                                 </a>    
@@ -113,7 +93,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                                 className={`${backgroundColor2} px-3 py-6 rounded-lg shadow-md shadow-black w-2/4
                                             text-center hover:scale-90 transition-all duration-300 ${fontColor}
                                             hover:shadow-none tracking-widest hover:bg-transparent
-                                            text-2xl font-semibold max-lg:text-xl`}
+                                            text-2xl font-semibold max-sm:text-xl`}
                                 href={urlRepo}
                                 >
                                     Repositorio
@@ -133,6 +113,27 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                             </div>
                             
                         </div>
+                        <div
+                        className="h-auto w-2/4 px-7 max-lg:w-full"
+                        >
+                            <p
+                            className={`${fontColor} text-xl font-semibold tracking-widest max-sm:text-base max-lg:text-center`}
+                            >
+                                {description}
+                            </p>
+
+                            <h2
+                            className={`${fontColor} text-2xl font-semibold tracking-widest mt-16 mb-7 max-lg:text-center`}>
+                                Desafio
+                            </h2>
+
+                            <p
+                            className={`${fontColor} text-xl font-semibold tracking-widest max-sm:text-base max-lg:text-center`}
+                            >
+                                {challenge}
+                            </p>
+                        </div>
+                        
                     </div>
                     
                 </div>
