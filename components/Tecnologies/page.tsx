@@ -22,7 +22,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
                     Tecnologías que utilizó:
                 </h1>
                 <div 
-                className={`flex flex-wrap gap-5 mb-[100px] mt-9`}
+                className={`flex flex-wrap gap-5 mb-[100px] mt-9 max-sm:justify-center`}
                 >
                     {data.map((t, i) => (
                         <Tecnology 
@@ -41,7 +41,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
                     Otras herramientas que utilizó:
                 </h1>
                 <div 
-                className={`flex flex-wrap gap-5 mt-9`}
+                className={`flex flex-wrap gap-5 mt-9 max-sm:justify-center`}
                 >
                     {dataTools.map((t, i) => (
                         <Tecnology 

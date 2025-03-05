@@ -24,7 +24,7 @@
         "BeginYear": "Oct 2024",
         "EndYear": "Dic 2024",
         "Institution": "Todo Code",
-        "learned": ["Spring Boot", "Spring Data JPA/Hibernate", "Lombok", "Maven", "Postman"]
+        "learned": ["Spring Boot", "Spring Data JPA", "Lombok", "Maven", "Postman"]
     },
     {
         "name": "Curso de Spring Security",
