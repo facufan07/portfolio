@@ -6,7 +6,7 @@ import "./style.css";
 
 export default function AboutMe({fontColor}: AboutMeProps) {
     return (
-        <div className="opa-ani px-7 w-full">
+        <div className="opa-ani px-7 w-full flex flex-col items-center">
             <p className={`text-3xl tracking-widest font-bold sm:w-[600px] ${fontColor} mb-9 leading-relaxed
                             `}>
                 Soy un estudiante interesado en el rubro IT.
