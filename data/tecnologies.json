@@ -3,6 +3,9 @@
         "name": "Java"
     },
     {
+        "name": "MySQL"
+    },
+    {
         "name": "Spring Boot"
     },
     {
@@ -10,26 +13,5 @@
     },
     {
         "name": "JPA/Hibernate"
-    },
-    {
-        "name": "React"
-    },
-    {
-        "name": "Next.js"
-    },
-    {
-        "name": "JavaScript"
-    },
-    {
-        "name": "TypeScript"
-    },
-    {
-        "name": "Tailwind"
-    },
-    {
-        "name": "CSS"
-    },
-    {
-        "name": "MySQL"
     }
-]
+] 

@@ -8,14 +8,15 @@ import Image from 'next/image'
 export default function Welcome({fontColor}: WelcomeProps){
 
     const border = fontColor === 'text-bHueso' ? 'border-r-2 border-bHueso' : 'border-r-2 border-nCarbon'
+    const borderImage = fontColor === 'text-bHueso' ? 'border-2 border-vMusgo' : 'border-2 border-nCarbon'
 
     return(
         <section className="flex justify-center items-center h-dvh lg:w-4/5">
             <div className="flex max-lg:flex-col max-lg:items-center gap-5 animation px-9 
                             ">
                 <Image src="/cvimgF.jpg" 
-                className="lg:w-1/5 max-lg:w-2/5 max-sm:w-3/5 h-full sm:rounded-s-full max-lg:rounded-full border-[3px] 
-                        border-nCarbon shadow-md shadow-black"
+                className={`lg:w-1/5 max-lg:w-2/5 max-sm:w-3/5 h-full sm:rounded-s-full max-lg:rounded-full
+                        shadow-md shadow-black ${borderImage}`}
                 width={200} 
                 height={200} 
                 alt="Facundo Fandiño"

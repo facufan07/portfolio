@@ -15,7 +15,7 @@ export default function Main() {
   const [themeBurguerMenu, setThemeBurguerMenu] = useState<string>('burger-menu-bHueso');
   const [navTheme, setNavTheme] = useState<string>('max-lg:bg-nSuave');
 
-  const [icon, setIcon] = useState<string>('sunn.svg');
+  const [icon, setIcon] = useState<string>('weather-sun.svg');
   const [iconBackground, setIconBackground] = useState<string>('bg-slate-100 hover:border-white');
 
   const [menu, setMenu] = useState<boolean>(false);
@@ -24,20 +24,20 @@ export default function Main() {
 
   const changeTheme = () => {
 
-    if(icon === 'sunn.svg'){
-      setIcon('moon.svg');
+    if(icon === 'weather-sun.svg'){
+      setIcon('moonn.svg');
       setIconBackground('bg-black hover:border-black');
       setThemeBackground('bg-bSuave');
       setThemeSideBar('bg-vSalvia');
-      setThemeFocus('hover:bg-green-100 border-b border-green-100');
+      setThemeFocus('hover:bg-vFluor border-b border-vFluor');
       setThemeFontSideBar('text-nCarbon');
       setThemeFont('text-nCarbon');
-      setThemeSelectedButton('bg-green-100');
+      setThemeSelectedButton('bg-vFluor');
       setThemeBurguerMenu('burger-menu-nCarbon');
       setNavTheme('max-lg:bg-bSuave');
     }
     else{
-      setIcon('sunn.svg');
+      setIcon('weather-sun.svg');
       setIconBackground('bg-slate-100 hover:border-white');
       setThemeBackground('bg-nSuave');
       setThemeSideBar('bg-vMusgo');
