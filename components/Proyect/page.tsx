@@ -25,7 +25,6 @@ export default function Proyect({fontColor, name, description, img, url,
     const tecnologiesCuted = tecnologies.slice(0, 5);
 
     const borderColor = fontColor === "text-bHueso" ? "border-bHueso hover:bg-bHueso hover:text-nCarbon" : "border-nCarbon hover:bg-nCarbon hover:text-bHueso";
-
     return (
         <>
             <div

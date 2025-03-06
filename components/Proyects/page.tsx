@@ -29,11 +29,17 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
     };
 
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
+    const underlineColor = fontColor === 'text-bHueso' ? 'border-vMusgo' : 'border-vSalvia'
 
     return (
-        <div className="w-[100%] h-5/6 flex justify-center items-center animation">
-            <div className="lg:w-[100%] max-sm:w-[100%] max-lg:w-[700px] max-lg:overflow-x-hidden 
-                            max-lg:overflow-y-hidden my-auto">
+        <div className="w-[100%] h-full flex items-center animation flex-col">
+
+            <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-10 ${underlineColor} pb-4
+                            border-b-2 lg:mt-10`}>
+                Proyectos
+            </h1>
+
+            <div className="lg:w-[100%] max-sm:w-[100%] max-lg:w-[700px]">
                 <Slider {...settings} className="text-center mx-auto">
                     {data.map((p, i) => (
                         <Proyect

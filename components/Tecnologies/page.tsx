@@ -14,66 +14,79 @@ import Tecnology from "../Tecnology/page";
 import "./style.css"
 
 export default function Tecnologies({fontColor, backgroundColor, backgroundColor2}: TecnologyProps){
+    const underlineColor = fontColor === 'text-bHueso' ? 'border-vMusgo' : 'border-vSalvia'
 
     return(
         <>
-            <div className="px-24 py-7 animation sm:w-full">
-                <h1 
-                className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center`}
-                >
-                    Tecnologías Frontend que utilizó:
+            <div className="px-24 py-7 animation sm:w-full sm:h-full flex flex-col items-center">
+                
+                <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-16 ${underlineColor} pb-4
+                                border-b-2 lg:mt-10`}>
+                    Tecnologías
                 </h1>
-                <div 
-                className={`flex flex-wrap gap-5 mb-[100px] mt-9 max-sm:justify-center`}
-                >
-                    {dataFront.map((t, i) => (
-                        <Tecnology 
-                        fontColor={fontColor}
-                        t={t.name}
-                        backgroundColor={backgroundColor}
-                        backgroundColor2={backgroundColor2}
-                        key={i}
-                        />
-                    ))}
-                </div>
+                
+                <div>
+                    <h2 
+                    className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center
+                                max-sm:text-2xl`}
+                    >
+                        Tecnologías Frontend que utilizó:
+                    </h2>
+                    <div 
+                    className={`flex flex-wrap gap-5 mb-[100px] mt-9 max-sm:justify-center`}
+                    >
+                        {dataFront.map((t, i) => (
+                            <Tecnology 
+                            fontColor={fontColor}
+                            t={t.name}
+                            backgroundColor={backgroundColor}
+                            backgroundColor2={backgroundColor2}
+                            key={i}
+                            />
+                        ))}
+                    </div>
 
-                <h1 
-                className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center`}
-                >
-                    Tecnologías Backend que utilizó:
-                </h1>
-                <div 
-                className={`flex flex-wrap gap-5 mb-[100px] mt-9 max-sm:justify-center`}
-                >
-                    {data.map((t, i) => (
-                        <Tecnology 
-                        fontColor={fontColor}
-                        t={t.name}
-                        backgroundColor={backgroundColor}
-                        backgroundColor2={backgroundColor2}
-                        key={i}
-                        />
-                    ))}
+                    <h2 
+                    className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center
+                                max-sm:text-2xl`}
+                    >
+                        Tecnologías Backend que utilizó:
+                    </h2>
+                    <div 
+                    className={`flex flex-wrap gap-5 mb-[100px] mt-9 max-sm:justify-center`}
+                    >
+                        {data.map((t, i) => (
+                            <Tecnology 
+                            fontColor={fontColor}
+                            t={t.name}
+                            backgroundColor={backgroundColor}
+                            backgroundColor2={backgroundColor2}
+                            key={i}
+                            />
+                        ))}
+                    </div>
+                    
+                    <h2
+                    className={`text-4xl tracking-widest ${fontColor} font-semibold max-sm:text-center
+                                max-sm:text-2xl`}
+                    >
+                        Otras herramientas que utilizó:
+                    </h2>
+                    <div 
+                    className={`flex flex-wrap gap-5 mt-9 max-sm:justify-center`}
+                    >
+                        {dataTools.map((t, i) => (
+                            <Tecnology 
+                            fontColor={fontColor}
+                            t={t.name}
+                            backgroundColor={backgroundColor}
+                            backgroundColor2={backgroundColor2}
+                            key={i}
+                            />
+                        ))}
+                    </div>
                 </div>
                 
-                <h1
-                className={`text-4xl tracking-widest ${fontColor} font-semibold max-sm:text-center`}
-                >
-                    Otras herramientas que utilizó:
-                </h1>
-                <div 
-                className={`flex flex-wrap gap-5 mt-9 max-sm:justify-center`}
-                >
-                    {dataTools.map((t, i) => (
-                        <Tecnology 
-                        fontColor={fontColor}
-                        t={t.name}
-                        backgroundColor={backgroundColor}
-                        backgroundColor2={backgroundColor2}
-                        key={i}
-                        />
-                    ))}
-                </div>
             </div>
         </>
     )

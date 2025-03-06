@@ -24,16 +24,20 @@ export default function Timeliner({fontColor, backgroundColor, backgroundColor2}
     return (
         <Timeline position={isMobile ? "right" : "alternate-reverse"}>
             {data.map((d, i) => (
-                <TimelineItem key={i}>
+                <TimelineItem key={i} sx={{ flexDirection: isMobile ? "row-reverse" : "row" }}>
                     <TimelineSeparator>
                         <TimelineDot 
-                        sx={{ backgroundColor: bgDot }}
+                        sx={{ 
+                            backgroundColor: bgDot, 
+                            width: isMobile ? 12 : 20, 
+                            height: isMobile ? 12 : 20 
+                        }} 
                         />
                         {i !== data.length - 1 &&(
                             <TimelineConnector />
                         )}
                     </TimelineSeparator>
-                    <TimelineContent>
+                    <TimelineContent  sx={{ mx: isMobile ? "20px" : "0px", textAlign: isMobile ? "left" : "inherit" }}>
                         <CardTrajectory
                         fontColor={fontColor}
                         backgroundColor={backgroundColor}

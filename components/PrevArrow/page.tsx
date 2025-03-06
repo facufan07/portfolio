@@ -9,7 +9,7 @@ export default function PrevArrow({ onClick, fontColor }:ArrowProps){
 
     return(
         <button
-        className={`absolute left-0 top-0 z-10 p-2 ${fontColor} hover:scale-125 transition-all duration-800 h-[100%] bg-transparent flex justify-center items-center`}
+        className={`absolute left-0 top-0 z-10 p-2 ${fontColor} hover:scale-90 transition-all duration-800 h-[100%] bg-transparent flex justify-center items-center`}
         onClick={onClick}
         >
                 <FaChevronLeft size={24} />
