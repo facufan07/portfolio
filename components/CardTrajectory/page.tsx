@@ -1,4 +1,5 @@
 import Tecnology from "../Tecnology/page";
+import "./style.css"
 
 interface CardTrajectoryProps {
     fontColor: string;
@@ -20,7 +21,7 @@ export default function CardTrajectory({fontColor, backgroundColor, backgroundCo
         <>
             <div
             className={`flex flex-col gap-5 rounded-lg items-start p-4 ${backgroundColor} shadow-md
-                    shadow-black max-sm:w-[250px] max-sm:mb-10`}
+                    shadow-black max-sm:w-[250px] max-sm:mb-10 appear`}
             >
                 <h1
                 className={`${fontColor} text-xl tracking-widest text-left max-sm:text-lg`}

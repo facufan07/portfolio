@@ -23,6 +23,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
     const svg = fontColor === 'text-bHueso' ? '/circle-xmark-svgrepo-com.svg' : '/circle-xmark-black.svg'
     const scrollbarStyle = fontColor === 'text-bHueso' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
     const scrollbarTrack = fontColor === 'text-bHueso' ? 'scrollbar-track-nSuave' : 'scrollbar-track-bSuave'
+    const underlineColor = fontColor === 'text-bHueso' ? 'border-nSuave' : 'border-BSuave'
 
     return createPortal(
         <section 
@@ -39,7 +40,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                     <nav className="flex justify-between items-center pt-12 pb-10">
                         <h1
                         className={`text-5xl ${fontColor} font-bold tracking-widest
-                                    max-lg:hidden`}
+                                    max-lg:hidden border-b-2 ${underlineColor} pb-4`}
                         >
                             {name}
                         </h1>
@@ -63,12 +64,13 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                     >
                         <h1
                         className={`text-5xl ${fontColor} font-bold tracking-widest lg:hidden mb-9 
-                                    max-sm:text-3xl px-7 text-center`}
+                                    max-sm:text-3xl px-7 text-center border-b-2 ${underlineColor} pb-6`}
                         >
                             {name}
                         </h1>
                         <div
-                        className="h-auto w-2/4 flex flex-col items-center max-lg:w-full max-lg:mt-2 max-lg:mb-10"
+                        className={`h-auto w-2/4 flex flex-col items-center max-lg:w-full max-lg:mt-2 
+                                    max-lg:mb-10 lg:pr-8`}
                         >
                             <Image
                             src={img}
@@ -114,21 +116,24 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                             
                         </div>
                         <div
-                        className="h-auto w-2/4 px-7 max-lg:w-full"
+                        className="h-auto w-2/4 px-7 max-lg:w-full max-lg:flex max-lg:flex-col max-lg:items-center"
                         >
                             <p
-                            className={`${fontColor} text-xl font-semibold tracking-widest max-sm:text-base max-lg:text-center`}
+                            className={`${fontColor} text-xl font-semibold tracking-widest max-sm:text-base 
+                                        max-lg:text-center`}
                             >
                                 {description}
                             </p>
 
                             <h2
-                            className={`${fontColor} text-2xl font-semibold tracking-widest mt-16 mb-7 max-lg:text-center`}>
+                            className={`${fontColor} text-2xl font-semibold tracking-widest mt-14 mb-7 
+                                        max-lg:text-center border-b-2 ${underlineColor} w-[7.5ch] pb-1`}>
                                 Desafio
                             </h2>
 
                             <p
-                            className={`${fontColor} text-xl font-semibold tracking-widest max-sm:text-base max-lg:text-center`}
+                            className={`${fontColor} text-xl font-semibold tracking-widest max-sm:text-base 
+                                        max-lg:text-center`}
                             >
                                 {challenge}
                             </p>
