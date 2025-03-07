@@ -2,12 +2,6 @@
     animation: fadeIn 0.7s ease-in-out;
 }
 
-.typing{
-    animation: typing 1s steps(12) forwards, blink .5s step-end infinite alternate;
-    
-    overflow: hidden;
-}
-
 @keyframes fadeIn {
     from {
         margin-left: 200px;

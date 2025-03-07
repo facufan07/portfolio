@@ -1,5 +1,5 @@
-.animation{
-    animation: fadeIn 0.2s ease-in-out;
+.animationWelcome{
+    animation: fadeIn 0.4s ease-in-out;
 }
 
 .typing{
@@ -8,9 +8,13 @@
     overflow: hidden;
 }
 
+.blink{
+    animation: blink2 .5s step-end infinite alternate;
+}
+
 @keyframes fadeIn {
     from {
-        margin-left: 200px;
+        margin-left: 1000px;
         opacity: 0;
     }
     50% {
@@ -28,6 +32,12 @@
 }
 
 @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    
+}
+@keyframes blink2 {
     50% {
         border-color: transparent;
     }
