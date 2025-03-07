@@ -1,5 +1,5 @@
 .opa-ani{
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.4s ease-in-out;
 }
 
 @keyframes opa-ani {

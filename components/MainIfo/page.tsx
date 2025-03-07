@@ -27,6 +27,7 @@ export default function MainIfo({fontColor, backgroundColor, section, background
                     max-sm:w-full max-sm:overflow-x-hidden
                     lg:overflow-y-auto lg:overflow-x-hidden scrollbar
                     ${scrollbarStyle} ${scrollbarTrack}`}
+        id="mainIfo"
         >
 
             {section === '' && (
