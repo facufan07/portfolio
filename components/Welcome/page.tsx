@@ -13,7 +13,7 @@ export default function Welcome({fontColor}: WelcomeProps){
     const borderImage = fontColor === 'text-bHueso' ? 'border-2 border-vMusgo' : 'border-2 border-vSalvia'
     const fontColorArea = fontColor === 'text-bHueso' ? 'text-vMusgo' : 'text-vSalvia'
 
-    const texts = ["Frontend", "Web"];
+    const texts = ["FullStack","Frontend", "Backend", "Web"];
     const [index, setIndex] = useState(0);
     const [text, setText] = useState("Frontend");
     const [deleting, setDeleting] = useState(false);
