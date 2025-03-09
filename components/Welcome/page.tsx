@@ -15,7 +15,7 @@ export default function Welcome({fontColor}: WelcomeProps){
 
     const texts = ["FullStack","Frontend", "Backend", "Web"];
     const [index, setIndex] = useState(0);
-    const [text, setText] = useState("Frontend");
+    const [text, setText] = useState("FullStack");
     const [deleting, setDeleting] = useState(false);
     const [speed, setSpeed] = useState(100);
     const [isUseEffectUsed, setIsUseEffectUsed] = useState(false);
