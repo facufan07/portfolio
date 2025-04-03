@@ -1,7 +1,7 @@
 [
     {
         "name": "Your chat",
-        "technologies": ["TypeScript", "Tailwind", "CSS", "React", "Next.js", "JAVA", "Spring Boot", "Spring security", "JPA/Hibernate", "MySQL"],
+        "technologies": ["TypeScript", "Tailwind", "CSS", "React", "Next.js", "JAVA", "Spring Boot", "Spring security", "JPA/Hibernate", "MySQL", "JWT"],
         "challenge": "Implementar el sistema de autenticación fue todo un desafío. Tenía muchos errores al querer guardar el token de acceso dentro de las cookies, pero finalmente logré entender cómo guardarlo y cómo interactuar con él para realizar acciones en la aplicación.",
         "desc": "Your Chat es una aplicación para poder comunicarte con vos mismo; sirve como una herramienta de autoconocimiento. Tiene un sistema de inicio de sesión, registro y cierre de sesión implementado con JSON Web Tokens.",
         "url": "https://your-chat-front-production.up.railway.app/",
