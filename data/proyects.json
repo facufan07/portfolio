@@ -1,5 +1,14 @@
 [
     {
+        "name": "Your chat",
+        "technologies": ["TypeScript", "Tailwind", "CSS", "React", "Next.js", "JAVA", "Spring Boot", "Spring security", "JPA/Hibernate", "MySQL"],
+        "challenge": "Implementar el sistema de autenticación fue todo un desafío. Tenía muchos errores al querer guardar el token de acceso dentro de las cookies, pero finalmente logré entender cómo guardarlo y cómo interactuar con él para realizar acciones en la aplicación.",
+        "desc": "Your Chat es una aplicación para poder comunicarte con vos mismo; sirve como una herramienta de autoconocimiento. Tiene un sistema de inicio de sesión, registro y cierre de sesión implementado con JSON Web Tokens.",
+        "url": "https://your-chat-front-production.up.railway.app/",
+        "urlRepo": "https://github.com/facufan07/your-chat-front",
+        "img": "/proyectImages/yourchat.png"
+    },
+    {
         "name": "ItCoolab",
         "technologies": ["JavaScript", "Tailwind", "CSS", "React", "Next.js"],
         "challenge": "Trabajé junto a una desarrolladora UX/UI y, al principio, fue un reto importar los modelos de Figma, ya que nunca había trabajado con un profesional UX/UI. Aun así, aprendí sobre la marcha y pude implementar correctamente los estilos.",
