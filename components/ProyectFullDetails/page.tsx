@@ -88,7 +88,8 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                                             text-center hover:scale-90 transition-all duration-300
                                             hover:shadow-none ${fontColor} tracking-widest hover:bg-transparent
                                             text-2xl font-semibold max-sm:text-xl`}
-                                href={url}> 
+                                href={url}
+                                target="_blank"> 
                                     Deploy
                                 </a>    
                                 <a 
@@ -97,6 +98,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                                             hover:shadow-none tracking-widest hover:bg-transparent
                                             text-2xl font-semibold max-sm:text-xl`}
                                 href={urlRepo}
+                                target="_blank"
                                 >
                                     Repositorio
                                 </a>
