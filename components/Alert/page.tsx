@@ -1,5 +1,4 @@
 import CircularProgress from '@mui/material/CircularProgress';
-import { useState } from 'react';
 
 interface AlertProps {
     fontColor: string;
