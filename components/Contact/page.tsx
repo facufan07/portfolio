@@ -23,20 +23,22 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
     const [mensaje, setMensaje] = useState<string>("");
     const [alert, setAlert] = useState<boolean>(false);
     const [alertMessage, setAlertMessage] = useState<string>("");
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleSubmit = () => {
+        setIsLoading(true);
+        setAlert(true);
         axios.post("https://mail-sender-production-4514.up.railway.app/mail", {
             mail: mail,
             subject: asunto,
             message: mensaje
         }).then(() => {
-            setAlert(true);
             setAlertMessage("Mensaje enviado con éxito");
         })
         .catch(() => {
-            setAlert(true);
             setAlertMessage("Error al enviar el mensaje");
         })
+        setIsLoading(false);
     }
 
     return(
@@ -127,7 +129,6 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
                             type="text" 
                             onChange={(e) => setAsunto(e.target.value)}
                             required
-                            minLength={8}
                             placeholder="Escribe el asunto . . ."
                             className={`w-[500px] max-sm:w-full px-2 rounded-lg ${backgroundColor}
                                         ${fontColor} shadow-md shadow-black outline-none py-2
@@ -143,7 +144,6 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
                         required
                         placeholder="Escribe tu mensaje . . ."
                         onChange={(e) => setMensaje(e.target.value)}
-                        minLength={15}
                         className={`${backgroundColor} ${fontColor} w-[500px] max-sm:w-full px-2 rounded-lg
                                     shadow-md shadow-black outline-none py-1 text-base ${placeholderColor}
                                     resize-none h-[150px] tracking-widest py-2`}
@@ -171,6 +171,7 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
                 backgroundColor2={backgroundColor2}
                 message={alertMessage}
                 setAlert={setAlert}
+                isLoading={isLoading}
                 />
             )}
 
