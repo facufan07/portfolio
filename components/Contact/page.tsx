@@ -34,11 +34,13 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
             message: mensaje
         }).then(() => {
             setAlertMessage("Mensaje enviado con éxito");
+            setIsLoading(false);
         })
         .catch(() => {
             setAlertMessage("Error al enviar el mensaje");
+            setIsLoading(false);
         })
-        setIsLoading(false);
+        
     }
 
     return(

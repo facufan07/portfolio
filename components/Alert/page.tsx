@@ -16,7 +16,6 @@ export default function Alert({fontColor, backgroundColor, backgroundColor2, mes
             
             {isLoading ? (
                 <CircularProgress size={50} />
-
             ):(
                 <div
                 className={`flex flex-col gap-4 p-8 rounded-lg ${backgroundColor} max-sm:w-4/5`}
