@@ -29,10 +29,10 @@
     {
         "name": "Curso de Spring Security",
         "description": "Aprendiendo cómo desarrollar API seguras con Spring Security.",
-        "state": "En curso",
+        "state": "Completado",
         "BeginYear": "Enero 2025",
-        "EndYear": "Cursando",
+        "EndYear": "Abril 2025",
         "Institution": "Udemy",
-        "learned": ["Spring Security", "JWT"]
+        "learned": ["Spring Security", "JWT", "OAuth2"]
     }
 ]
