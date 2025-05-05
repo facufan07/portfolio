@@ -13,7 +13,7 @@ export default function Trajectory({fontColor, backgroundColor, backgroundColor2
         <section className="sm:w-full sm:h-full animation flex flex-col items-center">
             <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-10 ${underlineColor} pb-4
                             border-b-2 lg:mt-10`}>
-                Trayectoría
+                Trayectoria
             </h1>
 
             <Timeliner 

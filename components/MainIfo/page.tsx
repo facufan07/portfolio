@@ -70,7 +70,7 @@ export default function MainIfo({fontColor, backgroundColor, section, background
                 />
             )}
 
-            {section === 'Trayectoría' && (
+            {section === 'Trayectoria' && (
                 <Trajectory
                 fontColor={fontColor}
                 backgroundColor={backgroundColor}
