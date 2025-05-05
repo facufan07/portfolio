@@ -73,7 +73,7 @@ export default function Main() {
 
   return (
     <main className={`w-dvw h-dvh flex overflow-x-hidden 
-                    overflow-y-hidden max-lg:flex-col ${themeBackground}`}>
+                    overflow-y-hidden max-lg:flex-col ${themeBackground} transition-all duration-300`}>
       <SideBar 
         fontColor={themeFontSideBar}
         backgroundColor={themeSideBar}

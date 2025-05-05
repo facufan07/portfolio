@@ -23,7 +23,7 @@ export default function SideBar({fontColor, backgroundColor,
     return(
         <>
             <section className={`w-1/5 ${backgroundColor} transition-all 
-                                duration-800 flex flex-col shadow-lg z-[60] shadow-slate-950
+                                duration-300 flex flex-col shadow-lg z-[60] shadow-slate-950
                                 max-lg:hidden`}>
                 {data.map((s, i) => (
                     <button 
@@ -53,7 +53,7 @@ export default function SideBar({fontColor, backgroundColor,
                     </section>
 
                     <div className={`h-dvh ${backgroundColor} transition-all 
-                                    duration-800 flex flex-col shadow-lg z-[60] shadow-slate-950
+                                    duration-300 flex flex-col shadow-lg z-[60] shadow-slate-950
                                     lg:hidden fixed right-0 ${animation}`}
                     >
                         {data.map((s, i) => (

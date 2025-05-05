@@ -62,15 +62,16 @@ export default function Proyect({fontColor, name, description, img, url,
                     ))}
                     {tecnologies > tecnologiesCuted && (
                         <div
-                        className={`flex items-center gap-2 ${backgroundColor2} rounded-lg px-3 py-1 shadow-md shadow-black`}
+                        className={`flex items-center gap-2 ${backgroundColor2} rounded-lg px-3 py-1 
+                                    shadow-md shadow-black hover:scale-90 transition-all duration-300`}
                         >
                             <span
-                            className={`${fontColor} font- text-xl`}
+                            className={`${fontColor}`}
                             >
                                 +
                             </span>
                             <span 
-                            className={`${fontColor} tracking-widest font-semibold text-xl`}
+                            className={`${fontColor} tracking-widest font-semibold`}
                             >
                                 {tecnologies.length - tecnologiesCuted.length}
                             </span>
@@ -78,7 +79,8 @@ export default function Proyect({fontColor, name, description, img, url,
                     )}
                 </div>
                 <button 
-                className={`${borderColor} ${fontColor} border-2 rounded-lg px-4 py-2 mt-8  transition-all duration-300`}
+                className={`${borderColor} ${fontColor} border-2 rounded-lg px-4 py-2 mt-8  transition-all 
+                            duration-300`}
                 onClick={() => setIsSelected()}
                 >
                     <span

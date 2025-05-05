@@ -9,7 +9,8 @@ export default function Tecnology({fontColor, t, backgroundColor, backgroundColo
     return(
         <>
             <div
-                className={`flex items-center gap-2 ${backgroundColor2} rounded-lg px-3 py-1 shadow-md shadow-black `}
+                className={`flex items-center gap-2 ${backgroundColor2} rounded-lg px-3 py-1 shadow-md 
+                        shadow-black transition-all duration-300 hover:scale-90`}
                 >
                     <div 
                     className={`w-2 h-2 ${backgroundColor} rounded-full`}

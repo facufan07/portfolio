@@ -33,8 +33,7 @@ export default function MainIfo({fontColor, backgroundColor, section, background
         <section 
         className={`lg:w-4/5 transition-all duration-800
                     flex flex-col items-center lg:justify-center
-                    max-sm:h-5/6 
-                    max-lg:py-4 max-lg:mx-auto 
+                    max-sm:h-5/6 max-lg:py-4 
                     max-sm:w-full max-sm:overflow-x-hidden
                     overflow-y-auto lg:overflow-x-hidden scrollbar
                     ${scrollbarStyle} ${scrollbarTrack}`}

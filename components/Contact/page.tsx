@@ -46,12 +46,12 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
     return(
         <section className="animation h-full flex flex-col lg:py-10 w-full items-center">
             <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-16 ${underlineColor} pb-4
-                                border-b-2 lg:mt-10`}>
+                            border-b-2 lg:mt-10`}>
                     Contacto
             </h1>
             <div>
                 
-                <div className="">
+                <div>
                     
                     <h1 className={`${fontColor} text-4xl font-bold tracking-widest mb-8
                                     max-sm:text-center`}
