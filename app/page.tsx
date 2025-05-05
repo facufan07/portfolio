@@ -13,7 +13,6 @@ export default function Main() {
   const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino border-b border-vPino');
   const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-vPino');
   const [themeBurguerMenu, setThemeBurguerMenu] = useState<string>('burger-menu-bHueso');
-  const [navTheme, setNavTheme] = useState<string>('max-lg:bg-nSuave');
 
   const [icon, setIcon] = useState<string>('weather-sun.svg');
   const [iconBackground, setIconBackground] = useState<string>('bg-slate-100 hover:border-white');
@@ -34,7 +33,6 @@ export default function Main() {
       setThemeFont('text-nCarbon');
       setThemeSelectedButton('bg-vFluor');
       setThemeBurguerMenu('burger-menu-nCarbon');
-      setNavTheme('max-lg:bg-bSuave');
     }
     else{
       setIcon('weather-sun.svg');
@@ -46,7 +44,6 @@ export default function Main() {
       setThemeFont('text-bHueso');
       setThemeSelectedButton('bg-vPino');
       setThemeBurguerMenu('burger-menu-bHueso');
-      setNavTheme('max-lg:bg-nSuave');
     }
   }
 
@@ -91,7 +88,7 @@ export default function Main() {
         setIsActive={setIsActive}
       />
       
-      <div className={`lg:fixed top-0 px-4 flex justify-between items-center ${navTheme}
+      <div className={`lg:fixed top-0 px-4 flex justify-between items-center bg-transparent
                       transition-all duration-800 max-sm:h-1/6 sm:z-50 sm:w-full`}>
         <button
         onClick={() => {fadeOut()}}

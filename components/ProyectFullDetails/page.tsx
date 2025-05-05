@@ -130,7 +130,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                             <h2
                             className={`${fontColor} text-2xl font-semibold tracking-widest mt-14 mb-7 
                                         max-lg:text-center border-b-2 ${underlineColor} w-[7.5ch] pb-1`}>
-                                Desafio
+                                Desafío
                             </h2>
 
                             <p

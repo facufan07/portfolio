@@ -30,7 +30,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
                     className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center
                                 max-sm:text-2xl`}
                     >
-                        Tecnologías Frontend que utilizó:
+                        Tecnologías Frontend que utilizo:
                     </h2>
                     <div 
                     className={`flex flex-wrap gap-5 mb-[100px] mt-9 max-sm:justify-center`}
@@ -50,7 +50,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
                     className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center
                                 max-sm:text-2xl`}
                     >
-                        Tecnologías Backend que utilizó:
+                        Tecnologías Backend que utilizo:
                     </h2>
                     <div 
                     className={`flex flex-wrap gap-5 mb-[100px] mt-9 max-sm:justify-center`}
@@ -70,7 +70,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
                     className={`text-4xl tracking-widest ${fontColor} font-semibold max-sm:text-center
                                 max-sm:text-2xl`}
                     >
-                        Otras herramientas que utilizó:
+                        Otras herramientas que utilizo:
                     </h2>
                     <div 
                     className={`flex flex-wrap gap-5 mt-9 max-sm:justify-center`}
