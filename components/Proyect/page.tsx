@@ -28,7 +28,7 @@ export default function Proyect({fontColor, name, description, img, url,
     return (
         <>
             <div
-            className={`rounded-lg mx-14 px-6 py-6 scale-95 transition-all duration-300 shadow-md 
+            className={`rounded-lg mx-14 px-6 py-6 scale-95 transition-all duration-300 shadow-sm 
                         shadow-black ${backgroundColor} max-sm:w-6/6 max-sm:h-auto`}
             >
                 <div
@@ -49,7 +49,7 @@ export default function Proyect({fontColor, name, description, img, url,
                     {name}
                 </h1>
                 <div 
-                className={`flex flex-wrap gap-4 mt-8`}
+                className={`flex flex-wrap gap-4 mt-8 justify-center items-center`}
                 >
                     {tecnologiesCuted.map((t, i)=>(
                         <Tecnology

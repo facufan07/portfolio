@@ -35,7 +35,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                 <div
                 className={`${backgroundColor} w-4/5 h-5/6 overflow-y-auto lg:rounded-lg 
                             scrollbar ${scrollbarStyle} shadow-lg shadow-black pb-7
-                            max-lg:w-full max-lg:h-full ${scrollbarTrack} px-7`}
+                            max-lg:w-full max-lg:h-full ${scrollbarTrack} px-7 relative`}
                 >
                     <nav className="flex justify-between items-center pt-12 pb-10">
                         <h1
@@ -47,7 +47,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
 
                         <button
                         onClick={() => setIsSelected(null)}
-                        className="hover:scale-125 transition-all duration-300 max-lg:fixed right-7"
+                        className="hover:scale-125 transition-all duration-300 fixed right-[200px] max-lg:right-7"
 
                         >
                             <Image 
@@ -90,7 +90,7 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                                             text-2xl font-semibold max-sm:text-xl`}
                                 href={url}
                                 target="_blank"> 
-                                    Deploy
+                                    Live
                                 </a>    
                                 <a 
                                 className={`${backgroundColor2} px-3 py-6 rounded-lg shadow-md shadow-black w-2/4

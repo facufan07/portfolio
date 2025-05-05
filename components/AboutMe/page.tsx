@@ -9,9 +9,9 @@ export default function AboutMe({ fontColor }: AboutMeProps) {
     const underlineColor = fontColor === 'text-bHueso' ? 'border-vMusgo' : 'border-vSalvia'
 
     return (
-        <div className="opa-ani px-7 w-full flex flex-col items-center sm:h-full">
+        <div className="opa-ani px-7 w-full flex flex-col items-center justify-center sm:h-full">
             <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-10 ${underlineColor} pb-4
-                            border-b-2 lg:mt-10`}>
+                            border-b-2`}>
                 Sobre Mi
             </h1>
 
