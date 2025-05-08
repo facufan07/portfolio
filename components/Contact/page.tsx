@@ -28,7 +28,7 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
     const handleSubmit = () => {
         setIsLoading(true);
         setAlert(true);
-        axios.post("https://mail-sender-production-4514.up.railway.app/mail", {
+        axios.post("https://mail-sender-green-sunset-8750.fly.dev/mail", {
             mail: mail,
             subject: asunto,
             message: mensaje
