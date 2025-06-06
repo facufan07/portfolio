@@ -32,7 +32,7 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
     const underlineColor = fontColor === 'text-bHueso' ? 'border-vMusgo' : 'border-vSalvia'
 
     return (
-        <div className="w-[100%] h-full flex items-center animation flex-col">
+        <div className="w-[100%] flex items-center animation flex-col mb-[100px]">
 
             <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-10 ${underlineColor} pb-4
                             border-b-2 lg:mt-10`}>

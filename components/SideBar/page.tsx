@@ -24,7 +24,7 @@ export default function SideBar({fontColor, backgroundColor,
         <>
             <section className={`w-1/5 ${backgroundColor} transition-all 
                                 duration-300 flex flex-col shadow-lg z-[60] shadow-slate-950
-                                max-lg:hidden`}>
+                                max-lg:hidden h-dvh`}>
                 {data.map((s, i) => (
                     <button 
                     key={i}

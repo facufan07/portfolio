@@ -18,7 +18,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
 
     return(
         <>
-            <div className="px-24 py-7 animation sm:w-full sm:h-full flex flex-col items-center">
+            <div className="px-24 py-7 animation sm:w-full flex flex-col items-center mb-[100px]">
                 
                 <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-16 ${underlineColor} pb-4
                                 border-b-2 lg:mt-10`}>

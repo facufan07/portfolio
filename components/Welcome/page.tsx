@@ -57,10 +57,10 @@ export default function Welcome({fontColor}: WelcomeProps){
     }, [text, deleting, index, speed, isUseEffectUsed]);
     
     return(
-        <section className="flex justify-center items-center h-dvh lg:w-4/5 animationWelcome">
-            <div className="flex max-lg:flex-col max-lg:items-center gap-5  px-9 
-                            ">
-                <Image src="/cvimgF.jpg" 
+        <section className="flex justify-center items-center w-full animationWelcome lg:pt-64">
+            <div className="flex max-lg:flex-col max-lg:items-center gap-5 px-9 
+                            lg:ml-10">
+                <Image src="/cvimgFF.jpg" 
                 className={`lg:w-1/5 max-lg:w-2/5 max-sm:w-3/5 h-full sm:rounded-s-full max-lg:rounded-full
                         shadow-md shadow-black  px-1 py-1 ${borderImage}`}
                 width={200} 

@@ -44,7 +44,7 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
     }
 
     return(
-        <section className="animation h-full flex flex-col lg:py-10 w-full items-center">
+        <section className="animation flex flex-col lg:py-10 w-full items-center">
             <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-16 ${underlineColor} pb-4
                             border-b-2 lg:mt-10`}>
                     Contacto
@@ -158,7 +158,7 @@ export default function Contact({fontColor, backgroundColor, backgroundColor2}: 
                     type="submit" 
                     className={`${backgroundColor2} ${fontColor} w-1/5 max-sm:w-full px-2 rounded-lg
                                 shadow-md shadow-black outline-none py-1 font-semibold text-xl
-                                hover:scale-90 transition-all duration-300 tracking-widest mb-10`}
+                                hover:scale-90 transition-all duration-300 tracking-widest max-lg:mb-56`}
                     >
                         Enviar
                     </button>
