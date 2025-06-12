@@ -77,7 +77,7 @@ export default function Welcome({fontColor}: WelcomeProps){
                         Facundo Fandiño
                     </h1>
                     <div
-                    className="mt-5"
+                    className="mt-5 mx-auto"
                     >
                         <span className={`sm:text-4xl tracking-widest ${fontColor}  
                                     max-sm:text-2xl max-lg:text-4xl whitespace-nowrap  
