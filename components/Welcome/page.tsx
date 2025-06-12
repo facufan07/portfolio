@@ -24,7 +24,7 @@ export default function Welcome({fontColor}: WelcomeProps){
     useEffect(() => {
         setTimeout(() => {
             setIsUseEffectUsed(true);
-            setStyleAnimation("")
+            setStyleAnimation("border-transparent")
         }, 1000)
     })
 
