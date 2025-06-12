@@ -17,7 +17,7 @@ interface TimelinerProps {
 }
 
 export default function Timeliner({fontColor, backgroundColor, backgroundColor2}: TimelinerProps) {
-    const bgDot = fontColor === 'text-bHueso' ? '#F5F5DC' : '#33322E';
+    const bgDot = fontColor === 'text-[#CAC9C9]' ? '#F5F5DC' : '#33322E';
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 

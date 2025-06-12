@@ -9,9 +9,9 @@ import Image from 'next/image'
 
 export default function Welcome({fontColor}: WelcomeProps){
 
-    const border = fontColor === 'text-bHueso' ? 'border-r-2 border-bHueso' : 'border-r-2 border-nCarbon'
-    const borderImage = fontColor === 'text-bHueso' ? 'border-2 border-vMusgo' : 'border-2 border-vSalvia'
-    const fontColorArea = fontColor === 'text-bHueso' ? 'text-vMusgo' : 'text-vSalvia'
+    const border = fontColor === 'text-[#CAC9C9]' ? 'border-r-2 border-[#1FB854]' : 'border-r-2 border-nCarbon'
+    const borderImage = fontColor === 'text-[#CAC9C9]' ? 'border-2 border-[#110D0D]' : 'border-2 border-vSalvia'
+    const fontColorArea = fontColor === 'text-[#CAC9C9]' ? 'text-[#1FB854]' : 'text-vSalvia'
 
     const texts = ["FullStack","Frontend", "Backend", "Web"];
     const [index, setIndex] = useState(0);
@@ -62,7 +62,7 @@ export default function Welcome({fontColor}: WelcomeProps){
                             lg:ml-10">
                 <Image src="/cvimgFF.jpg" 
                 className={`lg:w-1/5 max-lg:w-2/5 max-sm:w-3/5 h-full sm:rounded-s-full max-lg:rounded-full
-                        shadow-md shadow-black  px-1 py-1 ${borderImage}`}
+                        shadow-md shadow-black  px-1 py-1 ${borderImage} transition-all duration-800`}
                 width={200} 
                 height={200} 
                 alt="Facundo Fandiño"
@@ -71,13 +71,13 @@ export default function Welcome({fontColor}: WelcomeProps){
                 <div className="flex flex-col justify-center px-6 py-4">
                     <h1 className={`sm:text-6xl max-sm:text-4xl tracking-wider ${fontColor} font-semibold 
                                     xl:whitespace-nowrap max-lg:whitespace-nowrap max-lg:text-center max-xl:leading-loose
-                                    `}>
+                                    transition-all duration-800`}>
                         Facundo Fandiño
                     </h1>
                     <h2 className={`sm:text-4xl tracking-widest ${fontColor} mt-10  
                                     max-sm:text-2xl max-lg:text-4xl whitespace-nowrap  
-                                    ${styleAnimation} font-extralight max-lg:mx-auto`}>
-                        Desarrollador <span className={`${fontColorArea} font-light ${border} blink`}>{text}</span>
+                                    ${styleAnimation} font-extralight max-lg:mx-auto transition-all duration-800`}>
+                        Desarrollador <span className={`${fontColorArea} font-light ${border} blink transition-all duration-800`}>{text}</span>
                     </h2>
                 </div>
             </div>

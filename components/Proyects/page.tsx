@@ -29,13 +29,13 @@ export default function Proyects({fontColor, backgroundColor, backgroundColor2}:
     };
 
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
-    const underlineColor = fontColor === 'text-bHueso' ? 'border-vMusgo' : 'border-vSalvia'
+    const underlineColor = fontColor === 'text-[#CAC9C9]' ? 'border-[#FFBE00]' : 'border-vSalvia'
 
     return (
         <div className="w-[100%] flex items-center animation flex-col mb-[100px]">
 
             <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-10 ${underlineColor} pb-4
-                            border-b-2 lg:mt-10`}>
+                            border-b-2 lg:mt-10 transition-all duration-800`}>
                 Proyectos
             </h1>
 

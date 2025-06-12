@@ -20,10 +20,10 @@ export default function ProyectFullDetails({ name, url, backgroundColor,
                                             backgroundColor2, urlRepo, tecnologies, 
                                             challenge, description, img, fontColor, 
                                             setIsSelected}:ProyectFullDetailsProps) {
-    const svg = fontColor === 'text-bHueso' ? '/circle-xmark-svgrepo-com.svg' : '/circle-xmark-black.svg'
-    const scrollbarStyle = fontColor === 'text-bHueso' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
-    const scrollbarTrack = fontColor === 'text-bHueso' ? 'scrollbar-track-nSuave' : 'scrollbar-track-bSuave'
-    const underlineColor = fontColor === 'text-bHueso' ? 'border-nSuave' : 'border-BSuave'
+    const svg = fontColor === 'text-bHueso' ? '/circle-xmark-svgrepo-com.svg' : '/circle-xmark-svgrepo-com.svg'
+    const scrollbarStyle = fontColor === 'text-[#CAC9C9]' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
+    const scrollbarTrack = fontColor === 'text-[#CAC9C9]' ? 'scrollbar-track-[#161212]' : 'scrollbar-track-bSuave'
+    const underlineColor = fontColor === 'text-[#CAC9C9]' ? 'border-[#110D0D]' : 'border-BSuave'
 
     return createPortal(
         <section 

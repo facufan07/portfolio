@@ -18,8 +18,8 @@ import { useEffect, useRef } from "react";
 export default function MainIfo({fontColor, backgroundColor, section, backgroundColor2, 
                                 }: MainIfoProps) {
 
-    const scrollbarStyle = fontColor === 'text-bHueso' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
-    const scrollbarTrack = fontColor === 'text-bHueso' ? 'scrollbar-track-nSuave' : 'scrollbar-track-bSuave'
+    const scrollbarStyle = fontColor === 'text-[#CAC9C9]' ? 'scrollbar-thumb-bHueso' : 'scrollbar-thumb-nCarbon'
+    const scrollbarTrack = fontColor === 'text-[#CAC9C9]' ? 'scrollbar-track-[#161212]' : 'scrollbar-track-bSuave'
 
     const mainRef = useRef<HTMLDivElement>(null);
 

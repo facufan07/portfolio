@@ -6,12 +6,12 @@ import { useState } from "react";
 
 export default function Main() {
 
-  const [themeBackground, setThemeBackground] = useState<string>('bg-nSuave');
-  const [themeFont, setThemeFont] = useState<string>('text-bHueso');
-  const [themeSideBar, setThemeSideBar] = useState<string>('bg-vMusgo');
+  const [themeBackground, setThemeBackground] = useState<string>('bg-[#161212]');
+  const [themeFont, setThemeFont] = useState<string>('text-[#CAC9C9]');
+  const [themeSideBar, setThemeSideBar] = useState<string>('bg-[#19362D]');
   const [themeFontSideBar, setThemeFontSideBar] = useState<string>('text-bHueso');
-  const [themeFocus, setThemeFocus] = useState<string>('hover:bg-vPino border-b border-vPino');
-  const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-vPino');
+  const [themeFocus, setThemeFocus] = useState<string>('hover:bg-[#112820] border-b border-[#112820]');
+  const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-[#112820]');
   const [themeBurguerMenu, setThemeBurguerMenu] = useState<string>('burger-menu-bHueso');
 
   const [icon, setIcon] = useState<string>('weather-sun.svg');
@@ -37,12 +37,12 @@ export default function Main() {
     else{
       setIcon('weather-sun.svg');
       setIconBackground('bg-slate-100 hover:border-white');
-      setThemeBackground('bg-nSuave');
-      setThemeSideBar('bg-vMusgo');
-      setThemeFocus('hover:bg-vPino border-b border-vPino');
+      setThemeBackground('bg-[#161212]');
+      setThemeSideBar('bg-[#19362D]');
+      setThemeFocus('hover:bg-[#112820] border-b border-[#112820]');
       setThemeFontSideBar('text-bHueso');
-      setThemeFont('text-bHueso');
-      setThemeSelectedButton('bg-vPino');
+      setThemeFont('text-[#CAC9C9]');
+      setThemeSelectedButton('bg-[#112820]');
       setThemeBurguerMenu('burger-menu-bHueso');
     }
   }

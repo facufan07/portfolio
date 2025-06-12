@@ -23,18 +23,18 @@ export default function SideBar({fontColor, backgroundColor,
     return(
         <>
             <section className={`w-1/5 ${backgroundColor} transition-all 
-                                duration-300 flex flex-col shadow-lg z-[60] shadow-slate-950
+                                duration-800 flex flex-col shadow-lg z-[60] shadow-slate-950
                                 max-lg:hidden h-dvh`}>
                 {data.map((s, i) => (
                     <button 
                     key={i}
-                    className={`h-4/5 ${focus} transition-all duration-400 
+                    className={`h-4/5 ${focus} transition-all duration-800 
                             ${section === s.name ? buttonSelectedColor : ''} hover:scale-110
                             hover:shadow-md hover:shadow-black flex justify-center items-center`}
                     onClick={() => setSection(s.name)}
                     >
                         <span 
-                        className={`text-3xl ${fontColor} tracking-widest`}
+                        className={`text-3xl ${fontColor} tracking-widest transition-all duration-800`}
                         >
                             {s.name}
                         </span>

@@ -21,40 +21,47 @@ export default function CardTrajectory({fontColor, backgroundColor, backgroundCo
         <>
             <div
             className={`flex flex-col gap-5 rounded-lg items-start p-4 ${backgroundColor} shadow-md
-                    shadow-black max-sm:w-[250px] max-sm:mb-10 appear`}
+                    shadow-black max-sm:w-[250px] max-sm:mb-10 appear
+                    transition-all duration-800`}
             >
                 <h1
-                className={`${fontColor} text-xl tracking-widest text-left max-sm:text-lg`}
+                className={`${fontColor} text-xl tracking-widest text-left max-sm:text-lg
+                            transition-all duration-800`}
                 >
                     {name}
                 </h1>
 
                 <p
-                className={`${fontColor} text-sm tracking-widest text-left `}
+                className={`${fontColor} text-sm tracking-widest text-left
+                            transition-all duration-800`}
                 >
                     {description}
                 </p>
 
                 <p
-                className={`${fontColor} text-lg tracking-widest text-left max-sm:text-sm`}
+                className={`${fontColor} text-lg tracking-widest text-left max-sm:text-sm
+                            transition-all duration-800`}
                 >
                     Estado: {state}
                 </p>
 
                 <p
-                className={`${fontColor} text-lg tracking-widest text-left max-sm:text-sm`}
+                className={`${fontColor} text-lg tracking-widest text-left max-sm:text-sm
+                            transition-all duration-800`}
                 >
                     {BeginYear} - {EndYear}
                 </p>
 
                 <p
-                className={`${fontColor} text-lg tracking-widest text-left max-sm:text-sm`}
+                className={`${fontColor} text-lg tracking-widest text-left max-sm:text-sm
+                            transition-all duration-800`}
                 >
                     Institución: {Institution}
                 </p>
 
                 <h2
-                className={`${fontColor} text-lg tracking-widest text-left`}
+                className={`${fontColor} text-lg tracking-widest text-left
+                            transition-all duration-800`}
                 >
                     Aprendido:
                 </h2>

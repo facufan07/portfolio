@@ -24,11 +24,11 @@ export default function Proyect({fontColor, name, description, img, url,
     
     const tecnologiesCuted = tecnologies.slice(0, 5);
 
-    const borderColor = fontColor === "text-bHueso" ? "border-bHueso hover:bg-bHueso hover:text-nCarbon" : "border-nCarbon hover:bg-nCarbon hover:text-bHueso";
+    const borderColor = fontColor === "text-[#CAC9C9]" ? "border-[#CAC9C9] hover:bg-[#CAC9C9] hover:text-nCarbon" : "border-nCarbon hover:bg-nCarbon hover:text-bHueso";
     return (
         <>
             <div
-            className={`rounded-lg mx-14 px-6 py-6 scale-95 transition-all duration-300 shadow-sm 
+            className={`rounded-lg mx-14 px-6 py-6 scale-95 transition-all duration-800 shadow-sm 
                         shadow-black ${backgroundColor} max-sm:w-6/6 max-sm:h-auto`}
             >
                 <div
@@ -44,7 +44,8 @@ export default function Proyect({fontColor, name, description, img, url,
                 </div>
                 
                 <h1 
-                className={`${fontColor} text-center text-5xl max-sm:text-2xl font-bold tracking-widest`}
+                className={`${fontColor} text-center text-5xl max-sm:text-2xl font-bold tracking-widest
+                            transition-all duration-800`}
                 >
                     {name}
                 </h1>
@@ -63,15 +64,15 @@ export default function Proyect({fontColor, name, description, img, url,
                     {tecnologies > tecnologiesCuted && (
                         <div
                         className={`flex items-center gap-2 ${backgroundColor2} rounded-lg px-3 py-1 
-                                    shadow-md shadow-black hover:scale-90 transition-all duration-300`}
+                                    shadow-md shadow-black hover:scale-90 transition-all duration-800`}
                         >
                             <span
-                            className={`${fontColor}`}
+                            className={`${fontColor} transition-all duration-800`}
                             >
                                 +
                             </span>
                             <span 
-                            className={`${fontColor} tracking-widest font-semibold`}
+                            className={`${fontColor} tracking-widest font-semibold transition-all duration-800`}
                             >
                                 {tecnologies.length - tecnologiesCuted.length}
                             </span>
@@ -80,11 +81,12 @@ export default function Proyect({fontColor, name, description, img, url,
                 </div>
                 <button 
                 className={`${borderColor} ${fontColor} border-2 rounded-lg px-4 py-2 mt-8  transition-all 
-                            duration-300`}
+                            duration-800`}
                 onClick={() => setIsSelected()}
                 >
                     <span
-                    className="font-semibold text-2xl tracking-widest max-sm:text-sm"
+                    className="font-semibold text-2xl tracking-widest max-sm:text-sm
+                                transition-all duration-800"
                     >
                         Visualizar
                     </span>

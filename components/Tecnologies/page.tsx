@@ -14,21 +14,21 @@ import Tecnology from "../Tecnology/page";
 import "./style.css"
 
 export default function Tecnologies({fontColor, backgroundColor, backgroundColor2}: TecnologyProps){
-    const underlineColor = fontColor === 'text-bHueso' ? 'border-vMusgo' : 'border-vSalvia'
+    const underlineColor = fontColor === 'text-[#CAC9C9]' ? 'border-[#FFBE00]' : 'border-vSalvia'
 
     return(
         <>
             <div className="px-24 py-7 animation sm:w-full flex flex-col items-center mb-[100px]">
                 
                 <h1 className={`text-4xl tracking-widest ${fontColor} font-bold mb-16 ${underlineColor} pb-4
-                                border-b-2 lg:mt-10`}>
+                                border-b-2 lg:mt-10 transition-all duration-800`}>
                     Tecnologías
                 </h1>
                 
                 <div>
                     <h2 
                     className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center
-                                max-sm:text-2xl`}
+                                max-sm:text-2xl transition-all duration-800`}
                     >
                         Tecnologías Frontend que utilizo:
                     </h2>
@@ -48,7 +48,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
 
                     <h2 
                     className={`text-4xl tracking-widest ${fontColor} font-semibold mb-6 max-sm:text-center
-                                max-sm:text-2xl`}
+                                max-sm:text-2xl transition-all duration-800`}
                     >
                         Tecnologías Backend que utilizo:
                     </h2>
@@ -68,7 +68,7 @@ export default function Tecnologies({fontColor, backgroundColor, backgroundColor
                     
                     <h2
                     className={`text-4xl tracking-widest ${fontColor} font-semibold max-sm:text-center
-                                max-sm:text-2xl`}
+                                max-sm:text-2xl transition-all duration-800`}
                     >
                         Otras herramientas que utilizo:
                     </h2>
