@@ -24,8 +24,8 @@ export default function Welcome({fontColor}: WelcomeProps){
     useEffect(() => {
         setTimeout(() => {
             setIsUseEffectUsed(true);
-            setStyleAnimation("border-transparent")
-        }, 1000)
+            setStyleAnimation("border-transparent w-[23ch] typing")
+        }, 700)
     })
 
     useEffect(() => {
