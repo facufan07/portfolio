@@ -15,46 +15,48 @@ export default function Welcome({fontColor}: WelcomeProps){
 
     const texts = ["FullStack","Frontend", "Backend", "Web"];
     const [index, setIndex] = useState(0);
-    const [text, setText] = useState("FullStack");
+    const [text, setText] = useState("");
     const [deleting, setDeleting] = useState(false);
     const [speed, setSpeed] = useState(100);
-    const [isUseEffectUsed, setIsUseEffectUsed] = useState(false);
-    const [styleAnimation, setStyleAnimation] = useState(`${border} w-[23ch] typing`);
+    const [isFirstRender, setIsFirstRender] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
-            setIsUseEffectUsed(true);
-            setStyleAnimation("border-transparent w-[23ch] typing")
-        }, 700)
-    })
+        const currentText = texts[index];
 
-    useEffect(() => {
-        if(isUseEffectUsed){
-            const currentText = texts[index];
-        
-            if (!deleting && text === currentText) {
-                setTimeout(() => setDeleting(true), 1000);
-                return;
-            }
-            
-            if (deleting && text === "") {
-            setDeleting(false);
-            setIndex((prev) => (prev + 1) % texts.length);
-            return;
-            }
-            
+        if (isFirstRender) {
             const timeout = setTimeout(() => {
-                setText((prev) =>
-                deleting
-                    ? currentText.slice(0, prev.length - 1)
-                    : currentText.slice(0, prev.length + 1)
-                );
+                setText((prev) => {
+                    return currentText.slice(0, prev.length + 1);
+                })
                 setSpeed(deleting ? 50 : 100);
             }, speed);
-            
+            setIsFirstRender(false);
             return () => clearTimeout(timeout);
         }
-    }, [text, deleting, index, speed, isUseEffectUsed]);
+    
+        if (!deleting && text === currentText) {
+            setTimeout(() => setDeleting(true), 3000);
+            return;
+        }
+        
+        if (deleting && text === "") {
+        setDeleting(false);
+        setIndex((prev) => (prev + 1) % texts.length);
+        return;
+        }
+        
+        const timeout = setTimeout(() => {
+            setText((prev) =>
+            deleting
+                ? currentText.slice(0, prev.length - 1)
+                : currentText.slice(0, prev.length + 1)
+            );
+            setSpeed(deleting ? 50 : 100);
+        }, speed);
+        
+        return () => clearTimeout(timeout);
+        
+    }, [text, deleting, index, speed]);
     
     return(
         <section className="flex justify-center items-center w-full animationWelcome lg:pt-64">
@@ -74,11 +76,20 @@ export default function Welcome({fontColor}: WelcomeProps){
                                     transition-all duration-800`}>
                         Facundo Fandiño
                     </h1>
-                    <h2 className={`sm:text-4xl tracking-widest ${fontColor} mt-10  
+                    <div
+                    className="mt-5"
+                    >
+                        <span className={`sm:text-4xl tracking-widest ${fontColor}  
                                     max-sm:text-2xl max-lg:text-4xl whitespace-nowrap  
-                                    ${styleAnimation} font-extralight max-lg:mx-auto transition-all duration-800`}>
-                        Desarrollador <span className={`${fontColorArea} font-light ${border} blink transition-all duration-800`}>{text}</span>
-                    </h2>
+                                    font-extralight max-lg:mx-auto transition-all duration-800`}>
+                        Desarrollador 
+                        </span>
+                        <span className={`${fontColorArea} font-light ${border} blink transition-all duration-800
+                                    sm:text-4xl max-sm:text-2xl max-lg:text-4xl whitespace-nowrap ml-3`}>
+                        {text}
+                        </span>
+                    </div>
+                    
                 </div>
             </div>
         </section>
