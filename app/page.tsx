@@ -89,7 +89,7 @@ export default function Main() {
       />
       
       <div className={`lg:fixed top-0 px-4 flex justify-between items-center bg-transparent
-                      transition-all duration-800 max-sm:h-1/6 sm:z-50 sm:w-full`}>
+                      transition-all duration-800 max-sm:h-1/6 sm:z-50 sm:w-full lg:mx-[-20px]`}>
         <button
         onClick={() => {fadeOut()}}
         >
