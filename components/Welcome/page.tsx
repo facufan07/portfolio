@@ -66,7 +66,8 @@ export default function Welcome({fontColor}: WelcomeProps){
                 className={`lg:w-1/5 max-lg:w-2/5 max-sm:w-3/5 h-full sm:rounded-s-full max-lg:rounded-full
                         shadow-md shadow-black  px-1 py-1 ${borderImage} transition-all duration-800`}
                 width={200} 
-                height={200} 
+                height={200}
+                priority
                 alt="Facundo Fandiño"
                 />
 
