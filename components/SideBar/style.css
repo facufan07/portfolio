@@ -1,25 +1,29 @@
 .fadeIn{
-    animation: fade 0.5s ease-in-out;
+    animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fadeOut{
-    animation: fadeout 0.5s ease-in-out;
+    animation: slideOut 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes fade {
+@keyframes slideIn {
     from {
-        margin-right: 500px;
+        transform: translateX(100%);
+        opacity: 0;
     }
     to {
-        margin-right: 0px;
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
-@keyframes fadeout {
+@keyframes slideOut {
     from {
-        margin-right: 0px;
+        transform: translateX(0);
+        opacity: 1;
     }
     to {
-        margin-right: 900px;
+        transform: translateX(100%);
+        opacity: 0;
     }
 }

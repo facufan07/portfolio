@@ -1,27 +1,26 @@
 .animationWelcome{
-    animation: fadeIn 0.4s ease-in-out;
+    animation: fadeInSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .typing{
-    animation: typing 1s steps(12) forwards, blink .5s step-end infinite alternate;
-    
+    animation: typing 1.2s steps(12) forwards, blink .7s step-end infinite alternate;
     overflow: hidden;
 }
 
 .blink{
-    animation: blink2 .5s step-end infinite alternate;
+    animation: blink2 .7s step-end infinite alternate;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInSlide {
     from {
-        margin-left: 1000px;
+        transform: translateX(100px);
         opacity: 0;
-    }
-    50% {
+        filter: blur(10px);
     }
     to {
-        margin-left: 0px;
+        transform: translateX(0);
         opacity: 1;
+        filter: blur(0);
     }
 }
 
@@ -29,17 +28,19 @@
     from {
         width: 0;
     }
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink {
     50% {
         border-color: transparent;
     }
-    
 }
+
 @keyframes blink2 {
     50% {
         border-color: transparent;
     }
-    
 }

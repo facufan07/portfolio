@@ -9,9 +9,9 @@ import Image from 'next/image'
 
 export default function Welcome({fontColor}: WelcomeProps){
 
-    const border = fontColor === 'text-[#CAC9C9]' ? 'border-r-2 border-[#1FB854]' : 'border-r-2 border-nCarbon'
-    const borderImage = fontColor === 'text-[#CAC9C9]' ? 'border-2 border-[#110D0D]' : 'border-2 border-vSalvia'
-    const fontColorArea = fontColor === 'text-[#CAC9C9]' ? 'text-[#1FB854]' : 'text-vSalvia'
+    const border = fontColor === 'text-darkText' ? 'border-r-2 border-accentCyan' : 'border-r-2 border-lightAccent'
+    const borderImage = fontColor === 'text-darkText' ? 'border-4 border-darkAccent shadow-glow' : 'border-4 border-lightAccent shadow-modern'
+    const fontColorArea = fontColor === 'text-darkText' ? 'text-accentCyan' : 'text-lightAccent'
 
     const texts = ["FullStack","Frontend", "Backend", "Web"];
     const [index, setIndex] = useState(0);
@@ -62,19 +62,20 @@ export default function Welcome({fontColor}: WelcomeProps){
         <section className="flex justify-center items-center w-full animationWelcome lg:pt-64">
             <div className="flex max-lg:flex-col max-lg:items-center gap-5 px-9 
                             lg:ml-10">
-                <Image src="/cvimgFF.jpg" 
+                <Image src="/cvimgFF.jpg"
                 className={`lg:w-1/5 max-lg:w-2/5 max-sm:w-3/5 h-full sm:rounded-s-full max-lg:rounded-full
-                        shadow-md shadow-black  px-1 py-1 ${borderImage} transition-all duration-800`}
-                width={200} 
+                        px-1 py-1 ${borderImage} transition-all duration-800
+                        hover:scale-105 hover:rotate-2`}
+                width={200}
                 height={200}
                 priority
                 alt="Facundo Fandiño"
                 />
 
                 <div className="flex flex-col justify-center px-6 py-4">
-                    <h1 className={`sm:text-6xl max-sm:text-4xl tracking-wider ${fontColor} font-semibold 
+                    <h1 className={`sm:text-6xl max-sm:text-4xl tracking-wider ${fontColor} font-bold
                                     xl:whitespace-nowrap max-lg:whitespace-nowrap max-lg:text-center max-xl:leading-loose
-                                    transition-all duration-800`}>
+                                    transition-all duration-800 hover:gradient-text cursor-default`}>
                         Facundo Fandiño
                     </h1>
                     <div

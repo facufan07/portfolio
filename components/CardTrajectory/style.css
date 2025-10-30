@@ -1,20 +1,21 @@
 .appear{
-    animation: appear 5s linear;
+    animation: appear 5s cubic-bezier(0.16, 1, 0.3, 1);
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
 
-
 @keyframes appear {
     from {
-        scale: 0.5;
+        scale: 0.9;
         opacity: 0;
-    }
-    50% {
+        filter: blur(10px);
+        transform: translateY(30px);
     }
     to {
         scale: 1;
         opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
     }
 }
 

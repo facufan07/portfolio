@@ -6,12 +6,12 @@ import { useState } from "react";
 
 export default function Main() {
 
-  const [themeBackground, setThemeBackground] = useState<string>('bg-[#161212]');
-  const [themeFont, setThemeFont] = useState<string>('text-[#CAC9C9]');
-  const [themeSideBar, setThemeSideBar] = useState<string>('bg-[#19362D]');
-  const [themeFontSideBar, setThemeFontSideBar] = useState<string>('text-bHueso');
-  const [themeFocus, setThemeFocus] = useState<string>('hover:bg-[#112820] border-b border-[#112820]');
-  const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-[#112820]');
+  const [themeBackground, setThemeBackground] = useState<string>('bg-darkBg');
+  const [themeFont, setThemeFont] = useState<string>('text-darkText');
+  const [themeSideBar, setThemeSideBar] = useState<string>('bg-darkBgSecondary');
+  const [themeFontSideBar, setThemeFontSideBar] = useState<string>('text-darkText');
+  const [themeFocus, setThemeFocus] = useState<string>('hover:bg-darkBgTertiary border-b border-darkAccent');
+  const [themeSelectedButton, setThemeSelectedButton] = useState<string>('bg-darkAccent');
   const [themeBurguerMenu, setThemeBurguerMenu] = useState<string>('burger-menu-bHueso');
 
   const [icon, setIcon] = useState<string>('weather-sun.svg');
@@ -25,24 +25,24 @@ export default function Main() {
 
     if(icon === 'weather-sun.svg'){
       setIcon('moonn.svg');
-      setIconBackground('bg-black hover:border-black');
-      setThemeBackground('bg-bSuave');
-      setThemeSideBar('bg-vSalvia');
-      setThemeFocus('hover:bg-vFluor border-b border-vFluor');
-      setThemeFontSideBar('text-nCarbon');
-      setThemeFont('text-nCarbon');
-      setThemeSelectedButton('bg-vFluor');
+      setIconBackground('bg-lightAccent hover:border-lightAccentHover shadow-glow');
+      setThemeBackground('bg-lightBg');
+      setThemeSideBar('bg-lightBgSecondary shadow-modern');
+      setThemeFocus('hover:bg-lightBgTertiary border-b border-lightAccent');
+      setThemeFontSideBar('text-lightText');
+      setThemeFont('text-lightText');
+      setThemeSelectedButton('bg-lightAccent');
       setThemeBurguerMenu('burger-menu-nCarbon');
     }
     else{
       setIcon('weather-sun.svg');
-      setIconBackground('bg-slate-100 hover:border-white');
-      setThemeBackground('bg-[#161212]');
-      setThemeSideBar('bg-[#19362D]');
-      setThemeFocus('hover:bg-[#112820] border-b border-[#112820]');
-      setThemeFontSideBar('text-bHueso');
-      setThemeFont('text-[#CAC9C9]');
-      setThemeSelectedButton('bg-[#112820]');
+      setIconBackground('bg-darkAccent hover:border-darkAccentHover shadow-glow');
+      setThemeBackground('bg-darkBg');
+      setThemeSideBar('bg-darkBgSecondary');
+      setThemeFocus('hover:bg-darkBgTertiary border-b border-darkAccent');
+      setThemeFontSideBar('text-darkText');
+      setThemeFont('text-darkText');
+      setThemeSelectedButton('bg-darkAccent');
       setThemeBurguerMenu('burger-menu-bHueso');
     }
   }
@@ -95,10 +95,11 @@ export default function Main() {
         >
           <Image src={`../${themeBurguerMenu}.svg`} width={65} height={40} alt="Burger"/>
         </button>
-        <button 
-        className={`my-4 ${iconBackground} z-40 w-[70px] h-[70px] 
-                  rounded-full flex justify-center items-center hover:bg-transparent
-                  transition-all duration-500 border-2 hover:scale-110`}
+        <button
+        className={`my-4 ${iconBackground} z-40 w-[70px] h-[70px]
+                  rounded-full flex justify-center items-center
+                  transition-all duration-500 border-2 border-transparent
+                  hover:scale-110 hover:rotate-12 backdrop-blur-sm`}
         onClick={changeTheme}
         >
           <Image src={`../${icon}`} width={40} height={40} alt="icon"/>

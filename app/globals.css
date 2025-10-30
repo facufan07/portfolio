@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+
+  body {
+    @apply antialiased;
+    font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv02" on;
+  }
+
+  /* Scrollbar moderno */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-darkAccent to-accentPurple rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply from-darkAccentHover to-accentPink;
+  }
+}
+
+@layer components {
+  /* Clases utilitarias modernas */
+  .glass-effect {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-darkAccent to-accentPurple bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-modern-lg;
+  }
+
+  .modern-button {
+    @apply px-6 py-3 rounded-lg bg-gradient-to-r from-darkAccent to-accentPurple
+           text-white font-semibold shadow-glow hover:shadow-glow-lg
+           transition-all duration-300 hover:scale-105;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 gradient-text;
+  }
+}

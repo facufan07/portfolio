@@ -1,17 +1,17 @@
 .animation{
-    animation: fadeIn 0.7s ease-in-out;
+    animation: modernFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes fadeIn {
+@keyframes modernFadeIn {
     from {
-        margin-left: 200px;
+        transform: translateX(60px);
         opacity: 0;
-    }
-    50% {
+        filter: blur(8px);
     }
     to {
-        margin-left: 0px;
+        transform: translateX(0);
         opacity: 1;
+        filter: blur(0);
     }
 }
 
@@ -19,11 +19,13 @@
     from {
         width: 0;
     }
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink {
     50% {
         border-color: transparent;
     }
-    
 }
